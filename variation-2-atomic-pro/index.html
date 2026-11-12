@@ -1,0 +1,3784 @@
+<!DOCTYPE html>
+<html lang='de'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={"privacy":{"cookies_enabled":false},"ajax":{"deny_list":[]},"session_trace":{"sampling_rate":0.0,"mode":"FIXED_RATE","enabled":true,"error_sampling_rate":0.0},"feature_flags":["rum_v2"],"performance":{"capture_marks":false,"capture_detail":false,"capture_measures":true},"browser_consent_mode":{"enabled":false}};(window.NREUM||(NREUM={})).loader_config={"licenseKey":"fb6f79f277","applicationID":"314540","browserID":"518515"};;/*! For license information please see nr-loader-rum-1.324.1.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):e[s]instanceof Map||e[s]instanceof Set||e[s]instanceof Date||e[s]instanceof RegExp?r[s]=e[s]:"object"==typeof e[s]&&null!==t[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,a)])},7699(e,t,r){"use strict";var n=r(860);const i=1e6,a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,i,"KC",0,a,"qh",0,"SESSION_ERROR","zd",0,5e5])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.324.1"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=""+s?.location,u=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,a,"gm",0,s,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=s?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<s.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),a=r(860),s=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:a.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const a=e.ee,o=i.i.handlers;if(a&&!a.aborted&&a.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof s.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete o[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,a=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(i(r,a++).toString(16));return s.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,a){const d=a||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function l(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)("api-"+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",a="browser/blobs",s="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:a,[o.sessionReplay]:a,[o.logging]:s,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,s,"df",0,a,"hg",0,"connect"])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const a=t[n]={exports:{}};return e[n](a,a.exports,r),a.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],a=t[n++];r.o(e,i)?0===a&&n++:0===a?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:a})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.324.1.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.324.1.PROD:";r.l=(n,i,a,s)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==a){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+a){o=r;break}}}if(!o){c=!0;var d={296:"sha512-zuv39xzZ8AH/HwpVrtkixvcBuOFo2ydcFzMtXjx+3Iwr5g++inX+6YDH7J/8fOCAtBetz8aDyaYCRkGy2nnG/w=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+a),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[s]&&(o.integrity=d[s])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const a=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=a);const s=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(s,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,a,s]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in a)r.o(a,o)&&(r.m[o]=a[o]);if(s)s(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.324.1.PROD"]=self["webpackChunk:NRBA-1.324.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),a=r(1741);var s=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,connector:void 0,harvester:void 0,v2Target:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1},R="BA";var A=r(7836),x=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var S=r(9908);const k="newrelic-iframe-";function T(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,E)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,s.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),e.runtime.v2Target??={type:R,instance:e.agentIdentifier,get id(){return e.runtime.appMetadata?.agents?.[0]?.entityGuid},get attributes(){return{"entity.guid":this.id,appId:e.info.applicationID}}},v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(a.W.prototype).forEach(r=>{const n=a.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=A.ee.get(e.agentIdentifier),e.exposed=f,(0,x.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(k)&&(0,S.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var j=r(1863),P=r(4261),N=r(1738);var O=r(1687),M=r(4234),I=r(5289),D=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,D.V)(e)&&!0===e?.session_trace.enabled}var W=r(6389),B=r(7699);const C=new WeakSet,K=new WeakMap;class U extends M.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,W.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,s.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);try{await async function(e,t,n){if(K.has(e))return K.get(e);const i=(async()=>{if((0,D.V)(e.init))try{const{setupAgentSession:t}=await r.e(296).then(r.bind(r,1768));t(e)}catch(e){(0,f.R)(20,e),t.emit("internal-error",[e]),(0,S.p)(B.qh,[e],void 0,n,t)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}const[{Connector:i},{Harvester:a}]=await Promise.all([r.e(296).then(r.bind(r,6589)),r.e(296).then(r.bind(r,5237))]);e.runtime.connector=new i(e),e.runtime.harvester=new a(e);const s=Object.values(e.features).filter(t=>e.runtime.drainRegistry.has(t.featureName));Promise.all(s.map(e=>e.onAggregateImported)).then(()=>e.runtime.harvester.startTimer())})();K.set(e,i),await i}(e,this.ee,this.featureName)}catch(e){return(0,f.R)(79,e),this.ee.abort(),void this.loadedSuccessfully(!1)}try{if(!this.#r(this.featureName,e.runtime.session,e.init))return this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1)}};h.RI?(0,I.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!C.has(e)&&(C.add(e),!(0,s.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var L=r(6630);class F extends U{static featureName=L.T;constructor(e){var t;super(e,L.T),this.setupInspectionEvents(),t=e,(0,N.Y)(P.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,S.p)("api-"+P.Fw,[(0,j.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>e.init.feature_flags.includes("rum_v2")?r.e(296).then(r.bind(r,908)):r.e(296).then(r.bind(r,7927)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,I.sB)(t=>{e(t,"DOMContentLoaded")}),(0,I.GG)(t=>{e(t,"load")}),(0,I.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class G extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(F),T(this,e,e.loaderType||"agent"),t=this,(0,N.Y)(P.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,N.U)(t,e,r,P.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,N.Y)(P.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,S.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,N.U)(e,"enduser.id",t,P.Dl,!0)},e)}(this),function(e){(0,N.Y)(P.nb,function(t){if("string"==typeof t||null===t)return(0,N.U)(e,"application.version",t,P.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,N.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,N.Y)(P.Pv,function(t=!0){if("boolean"==typeof t){if((0,S.p)("api-"+P.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum?.()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures],i=this.init.feature_flags.includes("rum_v2");r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&(i||r.featureName!==t.K7.pageViewEvent))return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var H=r(2843),z=r(782);class Y extends U{static featureName=z.T;constructor(e){super(e,z.T),h.RI&&((0,H.u)(()=>(0,S.p)("docHidden",[(0,j.t)()],void 0,z.T,this.ee),!0),(0,H.G)(()=>(0,S.p)("winPagehide",[(0,j.t)()],void 0,z.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var Z=r(3969);class q extends U{static featureName=Z.TZ;constructor(e){super(e,Z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new G({features:[F,Y,q],loaderType:"lite"})})()})();</script>
+    <link rel="stylesheet" href="css/platform.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASVÖ Skiclub Graz</title>
+
+<meta property="og:url" content="https://5215.auf.ski/" />
+<meta property="og:title" content="ASVÖ Skiclub Graz" />
+<meta property="og:description" />
+<meta property="fb:app_id" content="475533612649248" />
+<meta property="og:image" content="https://assets1.skizeit.at/assets/logos/skizeit-austria-og-image-e7be5a8984b23752e63116b705ca7ca5b828ef70667900a77a8892c1f947349e.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+    <link rel="apple-touch-icon" href="https://assets1.skizeit.at/assets/pwa/aufski/apple-touch-icon-2dd675cdae71a9e740803c84e2889e5f3b3b22994c98eebbf1ca9e9deb9e0b44.png">
+
+  <link rel="icon" href="https://assets2.skizeit.at/assets/pwa/aufski/icon-93d2d0d30e1215967d4613f2b9cc0d3fe16e30bfc349c1b2a6b1f30e5d72d204.ico" sizes="any">
+  <link rel="icon" type="image/png" href="https://assets1.skizeit.at/assets/pwa/aufski/apple-touch-icon-2dd675cdae71a9e740803c84e2889e5f3b3b22994c98eebbf1ca9e9deb9e0b44.png">
+
+<meta name="application-name" content="5215.auf.ski">
+<meta name="apple-mobile-web-app-title" content="5215.auf.ski">
+<meta name="theme-color" content="#ffffff">
+
+
+<script defer>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("/service-worker.js", {
+      scope: '/'
+    }).then(function() {
+      console.log("Service Worker Registered");
+    });
+  }
+</script>
+
+
+    
+    
+    
+  
+    <script src="js/htmx.js" defer></script>
+    <script src="js/platform.js" defer></script>
+    <script src="js/theme.js" defer></script>
+</head>
+
+  <body class="platform standalone has-bg-img platform-5215">
+          <nav class="navbar navbar-default navbar-fixed-top navbar-style-with-bgcolor">
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <div class="navbar-header">
+        <div class="navbar-img-wrapper">
+            <a href="index.html">
+              <img src="images/logo.png" alt="ASVÖ Skiclub Graz Logo" />
+</a>        </div>
+        <div class="navbar-label-wrapper">
+          <div class="visible-xs">
+            <h1>
+              <a href="index.html">ASVÖ Skiclub Graz</a>
+            </h1>
+          </div>
+        </div>
+        <div class="navbar-collapse-wrapper">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <div class="hidden-xs">
+          <h1 style="display: inline-block">
+            <a href="index.html">ASVÖ Skiclub Graz</a>
+          </h1>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="component platform-page-link " data-id="22533" data-seq="1" data-title="News">
+  <a class="link" href="news.html">
+    
+              <span class="nav-label">News</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="22537" data-seq="5" data-title="Veranstaltungen">
+  <a class="link" href="veranstaltungen.html">
+    
+              <span class="nav-label">Veranstaltungen</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="22541" data-seq="6" data-title="Athleten">
+  <a class="link" href="athleten.html">
+    
+              <span class="nav-label">Athleten</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="22546" data-seq="7" data-title="Sponsoren">
+  <a class="link" href="sponsoren.html">
+    
+              <span class="nav-label">Sponsoren</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="22548" data-seq="9" data-title="Verein">
+  <a class="link" href="verein.html">
+    
+              <span class="nav-label">Verein</span>
+
+</a></li>
+
+          
+
+<li class="user-menu dropdown platform-page-link hidden-xs">
+      <a href="/login?return_to=https%3A%2F%2F5215.auf.ski%2F">
+    <span class="nav-label">Anmelden</span>
+</a>
+</li>
+
+<li class="user-menu platform-page-link visible-xs">
+      <a href="/login?return_to=https%3A%2F%2F5215.auf.ski%2F">
+    <span class="nav-label">Anmelden</span>
+</a>
+</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+        
+
+        <div class="content-container" style="">
+          <div class="page page-type-startpage">
+    
+
+  <div class="component block-group block-group-1ae4148e-2130-414f-9619-297e128cca22  ">
+    
+
+<section class="page-teaser page-teaser-articles-list">
+
+<div class="component header-image is-not-container-sized scgraz-hero-banner">
+  <div class="hero-banner-inner">
+    <div class="hero-backdrop"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-wrapper">
+      <div class="hero-content">
+        <div class="hero-top-row">
+          <span class="club-badge"><span class="badge-dot"></span> ASVÖ SKICLUB GRAZ · SEIT 1974</span>
+          <div class="moto-box">
+            <span class="moto-label">Motto:</span>
+            <span class="moto-switcher" id="moto-switcher">
+              <span class="moto-phrase active" data-phrase="Ride on">Ride on</span>
+              <span class="moto-phrase" data-phrase="Race on">Race on</span>
+            </span>
+          </div>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-main">LEIDENSCHAFT AUF SCHNEE</span>
+          <span class="hero-title-sub">Rennsport, Freeride & Nachwuchsförderung im ASVÖ Skiclub Graz</span>
+        </h1>
+        <div class="hero-athlete-badge">
+          <div class="athlete-badge-avatar">PP</div>
+          <div class="athlete-badge-text">
+            <span class="athlete-badge-name">Philipp Papst</span>
+            <span class="athlete-badge-role">Ski Austria D-Trainer</span>
+          </div>
+          <span class="trainer-pill">Head Coach</span>
+        </div>
+        <div class="hero-actions">
+          <a href="news.html" class="btn-hero btn-hero-primary">Aktuelles</a>
+          <a href="veranstaltungen.html" class="btn-hero btn-hero-secondary">Veranstaltungen</a>
+          <a href="verein.html" class="btn-hero btn-hero-outline">Der Verein</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="page-section-header container-fluid">
+
+  <h2>News</h2>
+
+
+
+</div>
+
+
+  <div class="container-fluid">
+    <div class="article-chronicle" data-component="article-chronicle">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-article">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/verein/team#article-106723">Team</a></div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1380091">Social Media</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          29.10.2026 17:06
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://5215.auf.ski/events/1380091">    <div class="img-container">
+      <img src="images/social-icons-triangle-white.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label">+ 3 Links</div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1380091">
+        <span>Beitrag vom 29.10.2026</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-article">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/verein/mitgliedschaft#article-106692">Mitgliedschaft</a></div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1379970">Hier bist du genau richtig! 2 kleine Schritte noch bis ins Team des Skiclub Graz.</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          29.10.2026 08:54
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://5215.auf.ski/events/1379970">    <div class="img-container">
+      <img src="images/SCG_Tabea1-e1673416019360.jpeg" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Schau auf unser vielfältiges Programmangebot auf der Homepage, Instagram oder Facebook.<br>Sende eine ausgefüllte Beitrittserklärung an office@skiclub-graz.atDownload Beitrittserklärung.pdf<br>Schon geschafft
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label">+ 1 PDF</div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1379970">
+        <span>Beitrag vom 29.10.2026</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-appointment">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/appointments/3634">Generalversammlung</a></div>
+          <div class="event-date">
+            <span class='date'>28.09.2026</span><span class='time'> 18:30</span>
+          </div><div class="subtitle-secondary"></div>
+            <div class="city-description">Hotel Weitzer, Grieskai 12-14</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1379967">Unser neuer Vorstand wurde gewählt!</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          29.09.2026 08:00
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://5215.auf.ski/events/1379967">    <div class="img-container">
+      <img src="images/Vorstand2026.jpeg" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Unser Vorstand wurde in der Generalversammlung entlastet und wieder gewählt! Vielen Dank an unseren Obmann Rainer Stelzer, sein Vorstandsteam und die Beiräte für die Bereitschaft weitere 4 Jahre den S
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1379967">
+        <span>Beitrag vom 29.09.2026</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-club">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link">Verein</div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1380018">50 Jahre Skiclub</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          12.10.2024 13:39
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://5215.auf.ski/events/1380018">    <div class="img-container">
+      <img src="images/50_skiclub_graz.jpg" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  "Zwischenbestzeit - 50 Jahre ASVÖ Skiclub Graz"!<br>Mit einer fulminanten Feier haben wir am 12.10.2024 im GH Griesbauer unser Jubiläum gefeiert!<br>Vielen Dank für Eure zahlreiche Teilnahme und fürs Mitfeier
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1380018">
+        <span>Beitrag vom 12.10.2024</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+              <div class="component sponsor-timeline sponsors-silver">
+  <div>Silber Sponsor</div>
+  <div class="component sponsor">
+    <a target="_blank" href="https://wutscher.com/">
+      <img class="img-responsive" src="images/Wutscher_Schriftzug_zweiz_CMYK_S_W_G_Medium.jpg" style="max-height: 450px"/>
+</a></div>
+
+</div>
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser is-main entity-appointment">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/appointments/3634">Generalversammlung</a></div>
+          <div class="event-date">
+            <span class='date'>28.09.2026</span><span class='time'> 18:30</span>
+          </div><div class="subtitle-secondary"></div>
+            <div class="city-description">Hotel Weitzer, Grieskai 12-14</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1379965">Einladung</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          28.09.2016 08:00
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://5215.auf.ski/events/1379965">    <div class="img-container">
+      <img src="images/a2c0584e-7efc-49bc-8520-e00e3bdf920e_1_.jpeg" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Wir laden euch herzlichst zur Generalversammlung des SC Graz ein. Diese findet am 28.09.2026 ab 18:30 statt.<br>Ort: Hotel Weitzer, Grieskai 12-14, 8020 Graz<br>Wir freuen uns auf euer Kommen und bitten aus o
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label">+ 1 PDF</div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1379965">
+        <span>Beitrag vom 28.09.2016</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+      <a class="page-teaser-more-link" href="news.html">
+        <span>Alle News</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+      </a>
+  </div>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-dates-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Veranstaltungen</h2>
+
+
+
+</div>
+
+
+  
+  <div class="article-dates-month-timeline">
+
+
+
+      <div class="component article-dates-list">
+          <h3 class="year-month">Dezember 2026</h3>
+          <ul class="list-unstyled">
+              <li class=' component article-date-list-item appointment'><div class="row">
+  <div class="col-xs-4 col-sm-2 col-md-1">
+    <div class="component calendar-sheet calendar-sheet-default">
+  <div class='date_time'><span class='month'>Dez</span><span class='year'> 2026</span><span class='day'>12</span><span class='weekday'>Sa</span><span class='time'> 00:00</span></div>
+</div>
+
+  </div>
+
+  <div class="visible-xs col-xs-8">
+    <span class="label label-default" style="background-color: #5bc0de">
+      Termin
+    </span>
+    <div class="date-description font-medium text-lg overflow-hidden whitespace-normal">
+      <a href="https://5215.auf.ski/appointments/3638">Schneetraining Gaal</a>
+      
+    </div>
+    <div class="discipline-place overflow-hidden">Gaaler Lifte</div>
+  </div>
+
+  <div class="hidden-xs col-xs-8 col-sm-6 col-md-5">
+    <div class="date-description font-medium text-lg overflow-hidden">
+      <a href="https://5215.auf.ski/appointments/3638">Schneetraining Gaal</a>
+      
+    </div>
+      <a class="link-text" href="https://5215.auf.ski/appointments/3638">Termin</a>
+  </div>
+
+  <div class="hidden-xs col-xs-12 col-sm-4 col-md-3">
+    <span class="label label-default" style="background-color: #5bc0de">
+      Termin
+    </span>
+    <div class="category-discipline-place">
+      Gaaler Lifte
+    </div>
+  </div>
+
+  <div class="clearfix visible-sm-block"></div>
+
+  <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-2 col-md-3 col-md-offset-0 col-date-type">
+    <div class="article-event-pictures pswp-pictures-container">
+</div>
+
+  </div>
+</div>
+</li>
+              <li class=' component article-date-list-item appointment'><div class="row">
+  <div class="col-xs-4 col-sm-2 col-md-1">
+    <div class="component calendar-sheet calendar-sheet-default">
+  <div class='date_time'><span class='month'>Dez</span><span class='year'> 2026</span><span class='day'>19</span><span class='weekday'>Sa</span><span class='time'> 00:00</span></div>
+</div>
+
+  </div>
+
+  <div class="visible-xs col-xs-8">
+    <span class="label label-default" style="background-color: #5bc0de">
+      Termin
+    </span>
+    <div class="date-description font-medium text-lg overflow-hidden whitespace-normal">
+      <a href="https://5215.auf.ski/appointments/3639">Schneetraining Gaal</a>
+      
+    </div>
+    <div class="discipline-place overflow-hidden">Gaaler Lifte</div>
+  </div>
+
+  <div class="hidden-xs col-xs-8 col-sm-6 col-md-5">
+    <div class="date-description font-medium text-lg overflow-hidden">
+      <a href="https://5215.auf.ski/appointments/3639">Schneetraining Gaal</a>
+      
+    </div>
+      <a class="link-text" href="https://5215.auf.ski/appointments/3639">Termin</a>
+  </div>
+
+  <div class="hidden-xs col-xs-12 col-sm-4 col-md-3">
+    <span class="label label-default" style="background-color: #5bc0de">
+      Termin
+    </span>
+    <div class="category-discipline-place">
+      Gaaler Lifte
+    </div>
+  </div>
+
+  <div class="clearfix visible-sm-block"></div>
+
+  <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-2 col-md-3 col-md-offset-0 col-date-type">
+    <div class="article-event-pictures pswp-pictures-container">
+</div>
+
+  </div>
+</div>
+</li>
+          </ul>
+      </div>
+
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="veranstaltungen.html">
+    <span>Alle Veranstaltungen</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-events-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Ergebnisse</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="article-events-timeline" data-component="article-events-timeline">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/51499">Konditionswettkampf Steirische Eiche</a></div>
+          <div class="event-date">
+            <span class='date'>04.07.2026</span><span class='time'> 10:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Landessportzentrum - Graz, Jahngasse 3</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1357777">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <table class="table component event-competitors">
+  <tbody>
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          22
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Liam Macenka
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1357777">
+        <span>Mehr anzeigen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/48910">16. Alois Rohrmoser Gedenkrennen</a></div>
+          <div class="event-date">
+            <span class='date'>04.04.2026</span><span class='time'> 09:30</span>
+          </div><div class="subtitle-secondary">, Riesenslalom</div>
+            <div class="city-description">Forstau / Fageralm</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1349254">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <table class="table component event-competitors">
+  <tbody>
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          5
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Gernot Feichter
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1349254">
+        <span>Mehr anzeigen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/51130">Men&#39;s Giant Slalom | FMC - Cat. B</a></div>
+          <div class="event-date">
+            <span class='date'>28.03.2026</span><span class='time'> 09:15</span>
+          </div><div class="subtitle-secondary">, Riesenslalom</div>
+            <div class="city-description">Muldenlift</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1347993">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+      <a class="more-link" href="https://5215.auf.ski/events/1347993">
+        <span>Mehr anzeigen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/ergebnisse">
+    <span>Alle Ergebnisse</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+
+
+    
+
+<section class="page-teaser page-teaser-athletes-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Athleten</h2>
+
+
+
+</div>
+
+
+  
+  <div class="article article-athlete-list" data-component=article-athlete-list>
+
+
+
+    <div data-items-container="athletes">
+      <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Liam Macenka" class="no-underline" href="/athletes/1307459">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1307459">Liam Macenka</a></h3>
+  <div class="hidden">
+    2026-07-04 08:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Teresa Adanic" class="no-underline" href="/athletes/1106798">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1106798">Teresa Adanic</a></h3>
+  <div class="hidden">
+    
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Benjamin Aganovic" class="no-underline" href="/athletes/1232467">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1232467">Benjamin Aganovic</a></h3>
+  <div class="hidden">
+    
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Jordan Akunor" class="no-underline" href="/athletes/1202183">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1202183">Jordan Akunor</a></h3>
+  <div class="hidden">
+    
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Michael Allesch" class="no-underline" href="/athletes/1157688">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1157688">Michael Allesch</a></h3>
+  <div class="hidden">
+    
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Felix Allmeier" class="no-underline" href="/athletes/1285418">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1285418">Felix Allmeier</a></h3>
+  <div class="hidden">
+    
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="athleten.html">
+    <span>Alle Athleten</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-teams-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Teams</h2>
+
+
+
+</div>
+
+
+  
+  <div class="component article-team-list">
+
+
+  <div class="teams">
+    <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-sm-6 col">
+          
+      <div class="component article-team-list-item">
+  <div class="component team-card panel text-center">
+  <div class="panel-heading">
+    
+
+
+      <h3 class="component team--title">  <a href="https://5215.auf.ski/team?id=56653">Versuch</a>
+</h3>
+      <p class="component team--subtitle">    Leitung: Philipp LINDNER,
+  2 Athleten,
+    Ski Alpin,
+  Saison 2026/27
+</p>
+
+
+    
+  </div>
+  <div class="component team--portrait-picture">
+  <div class="component event--event-picture">
+</div>
+
+</div>
+
+  
+  <div class="component card-rankings zero-starts">
+  <div class="num-starts">
+    0 Starts in Saison 2026/27
+  </div>
+
+    <div class="rankings" style="">
+      <div class="ranking ranking-first">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">1. Plätze</p>
+      </div>
+      <div class="ranking ranking-second">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">2. Plätze</p>
+      </div>
+      <div class="ranking ranking-third">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">3. Plätze</p>
+      </div>
+    </div>
+</div>
+
+
+  <a class="component details-link" target="_self" href="https://5215.auf.ski/team?id=56653">Zum Team &#187;</a>
+
+
+</div>
+
+</div>
+
+
+        </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/teams">
+    <span>Alle Teams</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-successes">
+  <div class="page-section-header container-fluid">
+
+  <h2>Erfolge</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="page-teaser-content">
+    <div class="mod-podium-shadow">
+      <div class="component statistic-podium-season">
+  <div class="component statistic-podium">
+    <div class=' component podium'><div class="podiums-wrapper">
+  <div class="second">
+    <div class="ontop">0</div>
+    <div class="podium">
+      <span>2</span>
+    </div>
+  </div>
+  <div class="first">
+    <div class="ontop">0</div>
+    <div class="podium">
+      <span>1</span>
+    </div>
+  </div>
+  <div class="third">
+    <div class="ontop">0</div>
+    <div class="podium">
+      <span>3</span>
+    </div>
+  </div>
+</div>
+  <div class="base">Erfolge 2026/27 bei 1 Einsätzen</div>
+</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="component statistic-topx-athletes-season">
+  <div class="component statistic-chart">
+    
+    <div style="text-align: center; margin-top: 30px;">
+      Noch keine Erfolge in dieser Saison.
+    </div>
+
+</div>
+</div>
+
+  </div>
+
+
+
+  <a class="page-teaser-more-link" href="/erfolge">
+    <span>Alle Erfolge</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-events-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Rennfotos</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="article-events-timeline" data-component="article-events-timeline">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/51499">Konditionswettkampf Steirische Eiche</a></div>
+          <div class="event-date">
+            <span class='date'>04.07.2026</span><span class='time'> 10:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Landessportzentrum - Graz, Jahngasse 3</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1357816">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="1067"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285018/25_race_gallery_thumb/3130ab651cdab8dcdcc54f68c73e3de7/IMG-20260704-WA0046.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">285018</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285019/25_race_gallery_thumb/34b1c94c7a75719353b260a424df1c3a/IMG-20260704-WA0047.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285019</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285020/25_race_gallery_thumb/5a3d415202cfe218358ffc0b30918221/IMG-20260704-WA0048.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285020</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285021/25_race_gallery_thumb/d6ad43f5f69054df885297b82f1955b0/IMG-20260704-WA0049.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285021</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285022/25_race_gallery_thumb/18c489bec43b028aa7e0b5f58d305317/IMG-20260704-WA0050.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285022</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285023/25_race_gallery_thumb/38fcc373b2c3e18da173ac9f09a71898/IMG-20260704-WA0051.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285023</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285024/25_race_gallery_thumb/dc16349f549dcc2f52a430103e25a625/IMG-20260704-WA0052.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285024</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285025/25_race_gallery_thumb/2bb04aef8800b418d9048fa3c18bc5b0/IMG-20260704-WA0053.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285025</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285026/25_race_gallery_thumb/a89c6f11c378acaad1aa0fdd7d20a0d7/IMG-20260704-WA0054.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285026</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-2 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285027/25_race_gallery_thumb/11ccdcbf2c5acfeee9a92226688822a5/IMG-20260704-WA0055.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285027</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285028/25_race_gallery_thumb/2b97f85198077496e45f70e267b596cb/IMG-20260704-WA0056.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285028</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285029/25_race_gallery_thumb/64da48f2ddd87325e82ca5d1df6474db/IMG-20260704-WA0057.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285029</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-3 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285030/25_race_gallery_thumb/e7e703c2e393c2f1e6fe4d29e19b426c/IMG-20260704-WA0058.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285030</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285031/25_race_gallery_thumb/5be92bf8e6cb827c8f59499b150972a2/IMG-20260704-WA0059.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285031</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285032/25_race_gallery_thumb/2cf2ee7640e4ba1e0a96948b51076c13/IMG-20260704-WA0060.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285032</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-4 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285033/25_race_gallery_thumb/1fd76b6291e6f8ca8b30482865d4bab6/IMG-20260704-WA0061.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285033</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285034/25_race_gallery_thumb/2728863dfd404f05412e47701bb280b7/IMG-20260704-WA0062.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285034</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="1200"
+       data-height="675"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285035/25_race_gallery_thumb/a7952747dc60e04eb440fbbfe7700d53/IMG-20260704-WA0063.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">285035</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-5 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285036/25_race_gallery_thumb/91de939c95f7f9e26df03809577be2dd/IMG-20260704-WA0064.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285036</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1357816"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 06.07.2026"
+       title="Veröffentlicht am 06.07.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285037/25_race_gallery_thumb/5355210323826f7ff8dc54e741ebc14c/IMG-20260704-WA0065.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285037</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1357816">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/51130">Men&#39;s Giant Slalom | FMC - Cat. B</a></div>
+          <div class="event-date">
+            <span class='date'>28.03.2026</span><span class='time'> 09:15</span>
+          </div><div class="subtitle-secondary">, Riesenslalom</div>
+            <div class="city-description">Muldenlift</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1348406">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="1200"
+       data-height="732"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283383/25_race_gallery_thumb/1a45af66ba44b31e9402ae1dee15fa2c/_ALP0007_MASTERS-WM_Reiteralm_A-GS_WM-Medaillen_QR-Code.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283383</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="534"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283384/25_race_gallery_thumb/e772363733fb4d1ed686d173041c69c3/_ALP5089_MASTERS-CUP_Reiteralm_BD-GS.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283384</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="1024"
+       data-height="667"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl(C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl(C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283385/25_race_gallery_thumb/16510d9712273ca10bdf64d9fa84e261/_ALP5098_MASTERS-CUP_Reiteralm_BD-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283385</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="1024"
+       data-height="683"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283387/25_race_gallery_thumb/5c8c2890bd4a1402f2cd605967fe379d/_ALP5926_MASTERS-CUP_Reiteralm_SiegerB-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283387</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="880"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283388/25_race_gallery_thumb/e4ad7756915634f3b522719f927aa67f/_ALP5940_MASTERS-CUP_Reiteralm_SiegerB-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283388</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="1024"
+       data-height="664"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283389/25_race_gallery_thumb/4b2018b569a47137e5076c47f7c048d3/_ALP5973_MASTERS-CUP_Reiteralm_SiegerACBD-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283389</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348406"
+       data-width="1024"
+       data-height="712"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283390/25_race_gallery_thumb/668741d22a7755e50ec5df6349887c7b/_ALP5975_MASTERS-CUP_Reiteralm_SiegerACBD-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283390</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1348406">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://5215.auf.ski/races/51126">Men&#39;s Giant Slalom | WCM - Cat. B</a></div>
+          <div class="event-date">
+            <span class='date'>27.03.2026</span><span class='time'> 10:15</span>
+          </div><div class="subtitle-secondary">, Riesenslalom</div>
+            <div class="city-description">Muldenlift</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://5215.auf.ski/events/1348402">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="643"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283315/25_race_gallery_thumb/c13ffb308b499e07c493d1f51a51fd18/_ALP0001_MASTERS-WM_Reiteralm_B-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283315</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="674"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283316/25_race_gallery_thumb/db592f7bbf1003f9fd666509df4098fc/_ALP0005_MASTERS-WM_Reiteralm_B-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283316</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1200"
+       data-height="732"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283317/25_race_gallery_thumb/8e1dbfba964fa9af1cbf071eb5e99899/_ALP0007_MASTERS-WM_Reiteralm_A-GS_WM-Medaillen_QR-Code.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283317</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="674"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283318/25_race_gallery_thumb/e328d7dcf33b693cdb5c9448b2033d1b/_ALP0007_MASTERS-WM_Reiteralm_B-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283318</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1013"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283319/25_race_gallery_thumb/d34120c213271757eef6ec0b40d0b4a9/_ALP0010_MASTERS-WM_Reiteralm_B-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283319</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="596"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283320/25_race_gallery_thumb/bec83d93126b2c97c47f9c1fd1ec0302/_ALP0011_MASTERS-WM_Reiteralm_B-GS.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283320</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="687"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283321/25_race_gallery_thumb/3c1e3e6fc1deebebec842f0e1169219a/_ALP0012_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283321</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="448"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283322/25_race_gallery_thumb/12739824baee59b330398ee9abb87726/_ALP0016_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283322</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="567"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283323/25_race_gallery_thumb/da9f9c322d981dda2251b195ad9aad0e/_ALP0018_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283323</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-2 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="557"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283324/25_race_gallery_thumb/11477695fdc2b01073ccb924d807c881/_ALP0024_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283324</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="557"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283325/25_race_gallery_thumb/7d4f3c746f14936dbcb22970093e1c2a/_ALP0026_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283325</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="531"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283326/25_race_gallery_thumb/f7b1c2940c7189af5adb48525a628b1b/_ALP0031_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283326</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-3 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="634"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283327/25_race_gallery_thumb/34c93e888d0a18304a59999794e482bb/_ALP0037_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283327</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="608"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283328/25_race_gallery_thumb/ad8e17fac87e3a092d6a39d1ce3ad30f/_ALP0039_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283328</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="683"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283329/25_race_gallery_thumb/c5f0515b8a1304d99c71232803b0ff80/_ALP0042_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283329</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-4 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="683"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283330/25_race_gallery_thumb/1cf9c086f3e6b996e0634555ccfe2521/_ALP0044_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283330</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="600"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283331/25_race_gallery_thumb/652e3a64ce6596e57e6a40ef6ff4d3e6/_ALP0046_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283331</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="633"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283332/25_race_gallery_thumb/e1f72e0c188ccde00abe06a650668cda/_ALP0060_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283332</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-5 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="633"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283333/25_race_gallery_thumb/76ba81c01cae6dc8b6b41a684464fc52/_ALP0061_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283333</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="633"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283334/25_race_gallery_thumb/fbbca0311a985b7c24d1cc773fb7179d/_ALP0087_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283334</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="630"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283335/25_race_gallery_thumb/89d42e0f21e3d613b6ce0ad7a108a35f/_ALP0093_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283335</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-6 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="674"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283336/25_race_gallery_thumb/5dab3369b5b27d220d6b5d5c57575fcc/_ALP0094_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283336</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="655"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283337/25_race_gallery_thumb/701c2555f71cd85bba7e3a0128aef6cc/_ALP0098_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283337</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="696"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283338/25_race_gallery_thumb/e22fbb061baef159b472029d443cf291/_ALP0112_MASTERS-WM_Reiteralm_B-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283338</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-7 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="709"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283339/25_race_gallery_thumb/783628650513d4881c0d93f414cb01ba/_ALP3031_MASTERS-WM_Reiteralm_FOTOTREFF-Team.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283339</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="534"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283340/25_race_gallery_thumb/4de535270ebe0743b9ec719e05e597f3/_ALP3041_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283340</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="534"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283341/25_race_gallery_thumb/141122df10f4156818c0eedf7729fdd4/_ALP3042_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283341</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-8 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="534"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283342/25_race_gallery_thumb/f9cd01336461b64ac6c691e242f57345/_ALP3043_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283342</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="683"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283343/25_race_gallery_thumb/d7152463f24cd34b7e2ec821252a53ab/_ALP3050_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283343</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="683"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283344/25_race_gallery_thumb/0d57c07b874c1a8df3e8297d7861afe9/_ALP3051_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283344</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-9 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="773"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283345/25_race_gallery_thumb/45d0ca2eed887941c4fb9bd9c72ec261/_ALP3052_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283345</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="749"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283346/25_race_gallery_thumb/944c6c1786922bc01fdfed9949a08750/_ALP3056_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283346</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="572"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283347/25_race_gallery_thumb/ac2178ce8a3ddd81efae9d118abd75f2/_ALP3060_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283347</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-10 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="670"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283348/25_race_gallery_thumb/95472fb52c0522029b491b7e036c32b6/_ALP3061_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283348</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="751"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283349/25_race_gallery_thumb/79bc32839bb5a3bc13f42469b0814ce7/_ALP3062_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283349</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="656"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283350/25_race_gallery_thumb/0e396ed7ddc5f20e556b335f272fb004/_ALP3064_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283350</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-11 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="527"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283351/25_race_gallery_thumb/902231eb0c4d96624bf6866b55c842b1/_ALP3065_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283351</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1019"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283352/25_race_gallery_thumb/c7c64daa2e934f755ce433c7baad264c/_ALP3068_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283352</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="982"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283353/25_race_gallery_thumb/5fe59d702d95a0849cf6231d56cca5d3/_ALP3070_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283353</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-12 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="525"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283354/25_race_gallery_thumb/ce3d31e28d4d763cd3f0b33ebdb69020/_ALP3106_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283354</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="525"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283355/25_race_gallery_thumb/5ceb86e014cc97d6b54f132f33a37c89/_ALP3108_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283355</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="732"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283356/25_race_gallery_thumb/fbfbb48e003a4e0ab3b03c071dd5cb04/_ALP3109_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283356</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-13 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="980"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283357/25_race_gallery_thumb/96a42057f3f66df74a571692ebfa9564/_ALP3111_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283357</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="802"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283358/25_race_gallery_thumb/b6066269a4cdf9b66f5ebcc57e62d1ad/_ALP3115_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283358</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="869"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283359/25_race_gallery_thumb/e380b94202034b1c9695873783b870ed/_ALP3118_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283359</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-14 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="661"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283360/25_race_gallery_thumb/d288fe1045af7eb4b6fbd9fd682b972f/_ALP3136_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283360</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="675"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283361/25_race_gallery_thumb/d1f4f5c545f5007cbe714b02137a1859/_ALP3143_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283361</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="680"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283362/25_race_gallery_thumb/09249f170db81a83ba3bc7893a0d8e0e/_ALP3153_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283362</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-15 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="680"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283363/25_race_gallery_thumb/b08cd02dc7e40c6388cf4e520707f91f/_ALP3154_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283363</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="905"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283364/25_race_gallery_thumb/2aa8bbb009fcc2a07eda4b36e141313b/_ALP3156_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283364</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="494"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283365/25_race_gallery_thumb/4a9af7711a8d540ec339c24e31d81c45/_ALP3161_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283365</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-16 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="830"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283366/25_race_gallery_thumb/5b3366b21121df48d7ebbfde26d14d1a/_ALP3166_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283366</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1006"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283367/25_race_gallery_thumb/d4275498241d2939ad75d1e1988e4675/_ALP3168_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283367</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="1024"
+       data-height="559"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283368/25_race_gallery_thumb/7cc7bc9eb51c9eb385440bedc1185e56/_ALP3177_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">283368</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-17 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://5215.auf.ski/events/1348402"
+       data-width="716"
+       data-height="800"
+       data-title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       title="Veröffentlicht am 29.03.2026 von (C)FotoLois.com, Alois Spandl"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/283369/25_race_gallery_thumb/4c545bedd67fa1b017425cb7e604ee64/_ALP3179_MASTERS-WM_Reiteralm_SiegerB-GS.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">283369</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://5215.auf.ski/events/1348402">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/rennfotos">
+    <span>Alle Rennfotos</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+</div>
+
+
+
+</div>
+
+        </div>
+
+          <div class="platform-footer">
+  <div class="platform-footer-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-first">
+          <a href="https://5215.auf.ski/verein/der-verein">Impressum</a>
+
+          <div class="mt-1.5 text-2xl">
+              <a target="_blank" class="no-underline" href="https://www.instagram.com/skiclub_graz">
+                <i class="fab fa-instagram"></i>
+</a>
+              <a target="_blank" class="no-underline" href="https://www.facebook.com/skiclubgraz">
+                <i class="fab fa-facebook"></i>
+</a>          </div>
+        </div>
+        <div class="col-sm-6 col-last">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="platform-footer-poweredby">
+    <div class="container-fluid">
+      <div class="text-powered-by">powered by</div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="sponsors-carousel-height-100">
+            <div class="component sponsors-carousel">
+  <div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/LogoESTMK4c.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/Das_Land_Steiermark_4C.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/Bronce_BINDERPNG.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/Wutscher_Schriftzug_zweiz_CMYK_S_W_G_Medium.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/oewg_logo_RGB.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/Steiemark_Logo_pos_4C.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/SCGLogo_Gigasport2.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/grazmobil_header_0.jpg" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/1024-QBE62OCK.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="images/SG-logo.png" style=""/>
+</a></div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-2 logo-wir-auf-ski">
+          <a target="_blank" href="https://wir.auf.ski">
+            <img class="img-responsive" src="https://assets0.skizeit.at/assets/auf-ski/wir-auf-ski-cbd03c52a855db4aa4ffa205d2ea322f9f319694c6f7660fabf6059648e497aa.svg" />
+</a>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div id="env" style="display: none">production</div>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+      <script>
+    (function () {
+      const isPWA =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;
+
+      window.clicky_custom = {
+        app_mode: isPWA ? 'pwa' : 'browser'
+      };
+      window.clicky_custom.visitor = {
+        app_mode: isPWA ? 'pwa' : 'browser'
+      };
+    })();
+  </script>
+
+  <script async data-id="100990799" src="//static.getclicky.com/js"></script>
+
+  
+<div class="variation-nav-pill" id="variation-nav-pill">
+  <button class="pill-toggle-btn" id="pill-toggle-btn" type="button" title="Zwischen Design-Varianten wechseln">
+    <span class="pill-num-badge">V2</span>
+    <span>Atomic ProCenter B&W</span>
+    <span>▾</span>
+  </button>
+  <div class="pill-dropdown-content">
+    <div style="font-size:11px; color:#94a3b8; text-transform:uppercase; margin-bottom:8px; font-weight:700;">Design-Varianten</div>
+    <a href="../variation-1-racing-velocity/index.html" class="pill-option ">1. Alpine Racing Velocity</a>
+    <a href="../variation-2-atomic-pro/index.html" class="pill-option active">2. Atomic ProCenter B&W</a>
+    <a href="../variation-3-vandeer-minimal/index.html" class="pill-option ">3. Van Deer Refined Alpine</a>
+    <a href="../variation-4-glacier-freeride/index.html" class="pill-option ">4. Glacier Freeride & Jump</a>
+    <a href="../variation-5-summit-heritage/index.html" class="pill-option ">5. Styrian Summit Heritage</a>
+    <a href="../index.html" class="pill-option pill-option-hub">⊞ Zur Varianten-Übersicht</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html lang='de'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fb6f79f277","applicationID":"314540","transactionName":"IgpfQEpfWl4HRh1hWwARV1tKXUVxDVpGQ1gNCVRGGx9GVU9RRFRZFRY=","queueTime":0,"applicationTime":1018,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={"privacy":{"cookies_enabled":false},"ajax":{"deny_list":[]},"session_trace":{"sampling_rate":0.0,"mode":"FIXED_RATE","enabled":true,"error_sampling_rate":0.0},"feature_flags":["rum_v2"],"performance":{"capture_marks":false,"capture_detail":false,"capture_measures":true},"browser_consent_mode":{"enabled":false}};(window.NREUM||(NREUM={})).loader_config={"licenseKey":"fb6f79f277","applicationID":"314540","browserID":"518515"};;/*! For license information please see nr-loader-rum-1.324.1.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):e[s]instanceof Map||e[s]instanceof Set||e[s]instanceof Date||e[s]instanceof RegExp?r[s]=e[s]:"object"==typeof e[s]&&null!==t[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,a)])},7699(e,t,r){"use strict";var n=r(860);const i=1e6,a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,i,"KC",0,a,"qh",0,"SESSION_ERROR","zd",0,5e5])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.324.1"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=""+s?.location,u=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,a,"gm",0,s,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=s?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<s.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),a=r(860),s=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:a.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const a=e.ee,o=i.i.handlers;if(a&&!a.aborted&&a.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof s.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete o[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,a=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(i(r,a++).toString(16));return s.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,a){const d=a||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function l(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)("api-"+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",a="browser/blobs",s="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:a,[o.sessionReplay]:a,[o.logging]:s,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,s,"df",0,a,"hg",0,"connect"])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const a=t[n]={exports:{}};return e[n](a,a.exports,r),a.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],a=t[n++];r.o(e,i)?0===a&&n++:0===a?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:a})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.324.1.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.324.1.PROD:";r.l=(n,i,a,s)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==a){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+a){o=r;break}}}if(!o){c=!0;var d={296:"sha512-zuv39xzZ8AH/HwpVrtkixvcBuOFo2ydcFzMtXjx+3Iwr5g++inX+6YDH7J/8fOCAtBetz8aDyaYCRkGy2nnG/w=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+a),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[s]&&(o.integrity=d[s])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const a=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=a);const s=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(s,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,a,s]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in a)r.o(a,o)&&(r.m[o]=a[o]);if(s)s(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.324.1.PROD"]=self["webpackChunk:NRBA-1.324.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),a=r(1741);var s=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,connector:void 0,harvester:void 0,v2Target:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1},R="BA";var A=r(7836),x=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var S=r(9908);const k="newrelic-iframe-";function T(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,E)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,s.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),e.runtime.v2Target??={type:R,instance:e.agentIdentifier,get id(){return e.runtime.appMetadata?.agents?.[0]?.entityGuid},get attributes(){return{"entity.guid":this.id,appId:e.info.applicationID}}},v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(a.W.prototype).forEach(r=>{const n=a.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=A.ee.get(e.agentIdentifier),e.exposed=f,(0,x.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(k)&&(0,S.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var j=r(1863),P=r(4261),N=r(1738);var O=r(1687),M=r(4234),I=r(5289),D=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,D.V)(e)&&!0===e?.session_trace.enabled}var W=r(6389),B=r(7699);const C=new WeakSet,K=new WeakMap;class U extends M.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,W.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,s.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);try{await async function(e,t,n){if(K.has(e))return K.get(e);const i=(async()=>{if((0,D.V)(e.init))try{const{setupAgentSession:t}=await r.e(296).then(r.bind(r,1768));t(e)}catch(e){(0,f.R)(20,e),t.emit("internal-error",[e]),(0,S.p)(B.qh,[e],void 0,n,t)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}const[{Connector:i},{Harvester:a}]=await Promise.all([r.e(296).then(r.bind(r,6589)),r.e(296).then(r.bind(r,5237))]);e.runtime.connector=new i(e),e.runtime.harvester=new a(e);const s=Object.values(e.features).filter(t=>e.runtime.drainRegistry.has(t.featureName));Promise.all(s.map(e=>e.onAggregateImported)).then(()=>e.runtime.harvester.startTimer())})();K.set(e,i),await i}(e,this.ee,this.featureName)}catch(e){return(0,f.R)(79,e),this.ee.abort(),void this.loadedSuccessfully(!1)}try{if(!this.#r(this.featureName,e.runtime.session,e.init))return this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1)}};h.RI?(0,I.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!C.has(e)&&(C.add(e),!(0,s.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var L=r(6630);class F extends U{static featureName=L.T;constructor(e){var t;super(e,L.T),this.setupInspectionEvents(),t=e,(0,N.Y)(P.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,S.p)("api-"+P.Fw,[(0,j.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>e.init.feature_flags.includes("rum_v2")?r.e(296).then(r.bind(r,908)):r.e(296).then(r.bind(r,7927)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,I.sB)(t=>{e(t,"DOMContentLoaded")}),(0,I.GG)(t=>{e(t,"load")}),(0,I.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class G extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(F),T(this,e,e.loaderType||"agent"),t=this,(0,N.Y)(P.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,N.U)(t,e,r,P.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,N.Y)(P.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,S.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,N.U)(e,"enduser.id",t,P.Dl,!0)},e)}(this),function(e){(0,N.Y)(P.nb,function(t){if("string"==typeof t||null===t)return(0,N.U)(e,"application.version",t,P.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,N.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,N.Y)(P.Pv,function(t=!0){if("boolean"==typeof t){if((0,S.p)("api-"+P.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum?.()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures],i=this.init.feature_flags.includes("rum_v2");r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&(i||r.featureName!==t.K7.pageViewEvent))return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var H=r(2843),z=r(782);class Y extends U{static featureName=z.T;constructor(e){super(e,z.T),h.RI&&((0,H.u)(()=>(0,S.p)("docHidden",[(0,j.t)()],void 0,z.T,this.ee),!0),(0,H.G)(()=>(0,S.p)("winPagehide",[(0,j.t)()],void 0,z.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var Z=r(3969);class q extends U{static featureName=Z.TZ;constructor(e){super(e,Z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new G({features:[F,Y,q],loaderType:"lite"})})()})();</script>
+    <link rel="stylesheet" href="https://assets0.skizeit.at/assets/themes/platform_theme_crimson-81434caf30e9749f545ff59645e7c135a9c1d2d8ecbd897a594ea8e8ce3d3c33.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atomic ProCenter</title>
+
+<meta property="og:url" content="https://atomic.auf.ski/" />
+<meta property="og:title" content="Atomic ProCenter" />
+<meta property="og:description" />
+<meta property="fb:app_id" content="475533612649248" />
+<meta property="og:image" content="https://assets1.skizeit.at/assets/logos/skizeit-austria-og-image-e7be5a8984b23752e63116b705ca7ca5b828ef70667900a77a8892c1f947349e.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+    <link rel="apple-touch-icon" href="https://assets1.skizeit.at/assets/pwa/aufski/apple-touch-icon-2dd675cdae71a9e740803c84e2889e5f3b3b22994c98eebbf1ca9e9deb9e0b44.png">
+
+  <link rel="icon" href="https://assets2.skizeit.at/assets/pwa/aufski/icon-93d2d0d30e1215967d4613f2b9cc0d3fe16e30bfc349c1b2a6b1f30e5d72d204.ico" sizes="any">
+  <link rel="icon" type="image/png" href="https://assets1.skizeit.at/assets/pwa/aufski/apple-touch-icon-2dd675cdae71a9e740803c84e2889e5f3b3b22994c98eebbf1ca9e9deb9e0b44.png">
+
+<meta name="application-name" content="atomic.auf.ski">
+<meta name="apple-mobile-web-app-title" content="atomic.auf.ski">
+<meta name="theme-color" content="#ffffff">
+
+
+<script defer>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("/service-worker.js", {
+      scope: '/'
+    }).then(function() {
+      console.log("Service Worker Registered");
+    });
+  }
+</script>
+
+
+    <script src="https://assets3.skizeit.at/assets/vendor/htmx-1f676fd91a064a7781efd4e90b17415b752301f97b014861df43be66309c568e.js" defer="defer"></script>
+    <script src="https://assets2.skizeit.at/assets/platform-fd3efe67c36ece94fa5729fe3ae77cc23a3e48a3965db0a6bfb3ad62281efb88.js" defer="defer"></script>
+    
+  </head>
+
+  <body class="platform standalone has-bg-img platform-ATOMIC " style="background-image: url(https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/assets/aufski/atomic/background_feller_bw_s.jpg)">
+          <nav class="navbar navbar-default navbar-fixed-top navbar-style-without-bgcolor ">
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <div class="navbar-header">
+        <div class="navbar-img-wrapper">
+            <a href="/">
+              <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285949/11_club_logo_fit/b158482510ef5fc7491851b1d1af3e41/apc-logo-1.jpg"/>
+</a>        </div>
+        <div class="navbar-label-wrapper">
+          <div class="visible-xs">
+            <h1>
+              <a href="/">Atomic ProCenter</a>
+            </h1>
+          </div>
+        </div>
+        <div class="navbar-collapse-wrapper">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <div class="hidden-xs">
+          <h1 style="display: inline-block">
+            <a href="/">Atomic ProCenter</a>
+          </h1>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="component platform-page-link " data-id="10832" data-seq="1" data-title="News">
+  <a class="link" href="/news">
+    
+              <span class="nav-label">News</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="7796" data-seq="5" data-title="Veranstaltungen">
+  <a class="link" href="/veranstaltungen">
+    
+              <span class="nav-label">Veranstaltungen</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="7801" data-seq="6" data-title="Athleten">
+  <a class="link" href="/athleten">
+    
+              <span class="nav-label">Athleten</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="33199" data-seq="7" data-title="JTC">
+  <a class="link" href="/jtc">
+    
+              <span class="nav-label">JTC</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="7812" data-seq="8" data-title="Produkte">
+  <a class="link" href="/atomic/produkte">
+    
+              <span class="nav-label">Produkte</span>
+
+</a></li>
+            <li class="component platform-page-link " data-id="7808" data-seq="10" data-title="Atomic">
+  <a class="link" href="/atomic">
+    
+              <span class="nav-label">Atomic</span>
+
+</a></li>
+
+          
+
+<li class="user-menu dropdown platform-page-link hidden-xs">
+      <a href="/login?return_to=https%3A%2F%2Fatomic.auf.ski%2F">
+    <span class="nav-label">Anmelden</span>
+</a>
+</li>
+
+<li class="user-menu platform-page-link visible-xs">
+      <a href="/login?return_to=https%3A%2F%2Fatomic.auf.ski%2F">
+    <span class="nav-label">Anmelden</span>
+</a>
+</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+        
+
+        <div class="content-container" style="background-color: rgba(255, 255, 255, 0.8)">
+          <div class="page page-type-startpage">
+    
+
+  <div class="component block-group block-group-4ad6e445-33a8-44dc-996d-0c98c42741c3  ">
+    
+
+<section class="page-teaser page-teaser-articles-list">
+      <div class="article-news swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide active">
+          
+<div class="component article-news-item has-two-col-layout img-fit-contain max-width-1400">
+  <div class="article-news-item-image article-teaser">
+        
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1238900">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/243611/44_article_gallery_fit/09156d10d09de008281c373c76f0e378/JTC.jpg" />
+</div>    
+</a>
+
+
+  </div>
+  <div class="article-news-item-content">
+        <div class="article article-default show-subtitle-and-date article-teaser entity-club">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link">ATOMIC</div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1238900">Werde Teil von Juniors To Champions!</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          12.08.2025 08:45
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+<div class="component teaser-text" style="word-break: break-word;">
+  Du bist zwischen 12 und 18 Jahre alt, fährst für einen Verein, eine Schwerpunktschule oder im Landesverband und kommst aus Österreich oder Deutschland?<br>Dann werde Teil von Juniors To Champions – dem Pr
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label">+ 1 Link</div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label">+ 1 PDF</div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1238900">
+        <span>Beitrag vom 12.08.2025</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+  </div>
+</div>
+
+        </div>
+    </div>
+
+  </div>
+
+    <div class="page-section-header container-fluid">
+
+  <h2>News</h2>
+
+
+
+</div>
+
+
+  <div class="container-fluid">
+    <div class="article-chronicle" data-component="article-chronicle">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser article-type-sponsor entity-article">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/atomic/produkte#article-34025">Produkte</a></div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1364875">REDSTER TJ 65</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          07.09.2026 07:57
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1364875">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285954/44_article_gallery_fit/febf8ab4aa7306ebbb1d1b63dd001d4d/afd.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Leistungsstarker Junioren-Skischuh für die Racing-Stars von morgen: der Atomic Redster TJ 65.
+</div>
+
+    <div class="component entity-attachments entity-links num-teaser-1">
+    <div class="entity-attachment">
+      
+
+    <a target="_blank" href="https://www.atomic.com/de-at/products/redster-tj-65-ae0002137-202600?nav=ato-youth-boots-race">REDSTER TJ 65</a>
+
+    </div>
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1364875">
+        <span>Zum Sponsor</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser article-type-sponsor entity-article">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/atomic/produkte#article-34025">Produkte</a></div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1364874">REDSTER TJ 60</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          07.09.2026 07:52
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1364874">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285953/44_article_gallery_fit/98bcdb2bc66452216ebce3d1cc78a433/trzswrt.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Der Skischuh der Wahl für leichte, junge Racer:innen: der Atomic Redster TJ 60 mit einem weichen Flex und speziellen Fit für die Rennprofis von morgen!
+</div>
+
+    <div class="component entity-attachments entity-links num-teaser-1">
+    <div class="entity-attachment">
+      
+
+    <a target="_blank" href="https://www.atomic.com/de-at/products/redster-tj-60-ae0002304-202600?nav=ato-youth-boots-race">REDSTER TJ 60</a>
+
+    </div>
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1364874">
+        <span>Zum Sponsor</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser article-type-sponsor entity-article">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/atomic/produkte#article-34026">Produkte</a></div>
+          <div class="event-date">
+            
+          </div><div class="subtitle-secondary"></div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1364873">REDSTER WC M HD</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          07.09.2026 07:36
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1364873">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285950/44_article_gallery_fit/da15c46e37ced3f0cb92106d1c8682ad/Screenshot_2026-09-07_074056.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  &nbsp;Atomic‑Weltcup‑Profis vertrauen darauf, dass der Redster WC M HD die Klarheit und den Kontrast liefert, den wettkampforientierte Rennläufer brauchen.&nbsp;
+</div>
+
+    <div class="component entity-attachments entity-links num-teaser-1">
+    <div class="entity-attachment">
+      
+
+    <a target="_blank" href="https://www.atomic.com/de-at/products/redster-wc-m-hd-an0564-202601?pr_prod_strat=pinned&amp;pr_rec_id=81a6dfe6e&amp;pr_rec_pid=10197799633224&amp;pr_ref_pid=10199554490696&amp;pr_seq=uniform">REDSTER WC M HD</a>
+
+    </div>
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1364873">
+        <span>Zum Sponsor</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser is-main entity-appointment">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/appointments/3191">Redster King and Queen 2025</a></div>
+          <div class="event-date">
+            <span class='date'>14.12.2025</span><span class='time'> 08:30</span>
+              - <span class='date'>14.12.2025</span><span class='time'> 13:00</span>
+          </div><div class="subtitle-secondary"></div>
+            <div class="city-description">Tulfes, Skigebiet Glungezer bei Hall in Tirol</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1266026">Termindetails</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          25.11.2025 07:56
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1266026">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/246080/44_article_gallery_fit/c4cdad70963682b2854cd90ce21aa02c/Screenshot_2025-11-25_075458.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Teilnahme nur mit Voranmeldung möglich!<br>Anmeldung ausschließlich über das mitgesendete Formular:<br>• Anmeldung offen am 17.11.2025 ab 19:00 Uhr
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label">+ 1 PDF</div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1266026">
+        <span>Beitrag vom 25.11.2025</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+              <div class="component sponsor-timeline sponsors-silver">
+  <div>Bindungen</div>
+  <div class="component sponsor">
+    <a target="_blank" href="https://www.atomic.com/de-at/shop-emea/product/icon-10-ad0440.html#color=52530">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220903/44_article_gallery_fit/fd4257d6e39df2a081f40374bb522d83/Screenshot_2025-02-18_132440.png" style="max-height: 450px"/>
+</a></div>
+
+</div>
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser is-main entity-appointment">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/appointments/3190">JTC Technikcamp</a></div>
+          <div class="event-date">
+            <span class='date'>12.12.2025</span><span class='time'> 08:30</span>
+              - <span class='date'>13.12.2025</span><span class='time'> 16:00</span>
+          </div><div class="subtitle-secondary"></div>
+            <div class="city-description">Tulfes, Skigebiet Glungezer bei Hall in Tirol</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1266023">Termindetails</a>
+</h4>
+        <div class="dat-article text-sm">
+          <span class="desc">
+            Veröffentlicht:
+          </span>
+          25.11.2025 07:46
+        </div>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      
+
+
+
+
+
+    
+
+  <a class="article-main-media type-image" href="https://atomic.auf.ski/events/1266023">    <div class="img-container">
+      <img src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/246079/44_article_gallery_fit/1c6f89965993bcf72468b35609c74cb8/Screenshot_2025-11-25_074442.png" />
+</div>    
+</a>
+
+<div class="component teaser-text" style="word-break: break-word;">
+  Teilnahme nur mit Voranmeldung möglich!<br>Anmeldung ausschließlich über das mitgesendete Formular.<br>Anmeldung offen am 17.11.2025 ab 19:00 Uhr.
+</div>
+
+    
+    <div class="component entity-attachments entity-links num-teaser-0">
+
+  <div class="more-label"></div>
+</div>
+
+    <div class="component entity-attachments entity-files num-teaser-0">
+
+  <div class="more-label">+ 1 PDF</div>
+</div>
+
+    <div class="component event"></div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1266023">
+        <span>Beitrag vom 25.11.2025</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+      <a class="page-teaser-more-link" href="/news">
+        <span>Alle News</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+      </a>
+  </div>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-dates-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Veranstaltungen</h2>
+
+
+
+</div>
+
+
+  
+  <div class="article-dates-month-timeline">
+
+
+    <div class="article-dates-list-empty">
+      Keine
+        aktuellen
+      Veranstaltungen vorhanden.
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/veranstaltungen">
+    <span>Alle Veranstaltungen</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-events-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Ergebnisse</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="article-events-timeline" data-component="article-events-timeline">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/52548">Kinder Sparkassen Bezirks KONDITIONSWETTBEWERB 2026/27</a></div>
+          <div class="event-date">
+            <span class='date'>08.11.2026</span><span class='time'> 10:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Kufstein</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1385076">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <table class="table component event-competitors">
+  <tbody>
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          5
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Katharina Silberberger
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-female pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1385076">
+        <span>Mehr anzeigen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/51931">Raiffeisen Bezirkscup Innsbruck Land/Stadt 26/27 Schüler - Konditionswettkampf</a></div>
+          <div class="event-date">
+            <span class='date'>07.11.2026</span><span class='time'> 16:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Turnhalle SMS Neustift</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1384683">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <table class="table component event-competitors">
+  <tbody>
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          2
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Benjamin Patsch
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          3
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Emma Nagl
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-female pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          4
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Jonas Zwinz
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+      <tr class="article-event-competitor description">
+    <td class="competitor-label">
+    </td>
+
+  <td class="competitor-name">
+    1 weiterer Athlet
+  </td>
+
+  <td class="competitor-person-icon">
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1384683">
+        <span>Alle Platzierungen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/52226">BC-Konditionswettkampf Kinder 2026/27</a></div>
+          <div class="event-date">
+            <span class='date'>07.11.2026</span><span class='time'> 09:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Mayrhofen</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1383996">Ergebnis</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <table class="table component event-competitors">
+  <tbody>
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          1
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Florian Kurz
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+      <tr class="article-event-competitor competitor">
+    <td class="competitor-label">
+        <span class="label label-success" style="font-size: 1em; display: inline-block; width: 100%">
+          1
+        </span>
+    </td>
+
+  <td class="competitor-name">
+    Alexander Schönsleben
+  </td>
+
+  <td class="competitor-person-icon">
+      <span class="person-icon person-male pull-right">
+  <span class="glyphicon glyphicon-user"></span>
+</span>
+
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1383996">
+        <span>Mehr anzeigen</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/ergebnisse">
+    <span>Alle Ergebnisse</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+
+
+    
+
+<section class="page-teaser page-teaser-athletes-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Athleten</h2>
+
+
+
+</div>
+
+
+  
+  <div class="article article-athlete-list" data-component=article-athlete-list>
+
+
+
+    <div data-items-container="athletes">
+      <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Katharina Silberberger" class="no-underline" href="/athletes/1155653">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1155653">Katharina Silberberger</a></h3>
+  <div class="hidden">
+    2026-11-08 09:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+    <a href="/athletes/1105636"
+       data-width="576"
+       data-height="432"
+       data-title="Leah Dusek"
+       title="Leah Dusek"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/249791/1_athlete_main_fit/cd117d4050946c5f7052d01b430084d1/IMG_6986.jpeg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">249791</div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1105636">Leah Dusek</a></h3>
+  <div class="hidden">
+    2026-11-07 15:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+
+      <a title="Emma Nagl" class="no-underline" href="/athletes/1125720">      <div class="img-container no-pic-default">Kein Foto</div>
+</a>
+  <div class="pid"></div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1125720">Emma Nagl</a></h3>
+  <div class="hidden">
+    2026-11-07 15:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+    <a href="/athletes/1151661"
+       data-width="600"
+       data-height="676"
+       data-title="Benjamin Patsch"
+       title="Benjamin Patsch"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/203353/1_athlete_main_fit/c5fa457e26c66c150f9488032260b9e2/IMG_0148.jpeg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">203353</div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1151661">Benjamin Patsch</a></h3>
+  <div class="hidden">
+    2026-11-07 15:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+    <a href="/athletes/1157347"
+       data-width="378"
+       data-height="288"
+       data-title="Jonas Zwinz"
+       title="Jonas Zwinz"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/173199/1_athlete_main_fit/84f9d42753d4eb8590a4d2431c8f30be/jonas_3.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">173199</div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1157347">Jonas Zwinz</a></h3>
+  <div class="hidden">
+    2026-11-07 15:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+        <div class="col-sm-4 col">
+          
+        <div class="component athlete--list-item" style="text-align: center; margin-bottom: 100px">
+  <div class="mod-pic-160">
+    <div class="component athlete-portrait-picture mod-pic-circle">
+  <div class="component picture-thumb">
+    <a href="/athletes/1132003"
+       data-width="600"
+       data-height="555"
+       data-title="Florian Kurz"
+       title="Florian Kurz"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/259281/1_athlete_main_fit/e30a1c5cd8c0773eeb94a9edd50e34a4/EXPA-ADE-260118-7122_resized.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">259281</div>
+</div>
+
+</div>
+  </div>
+
+  <h3 class="mt-5 mb-2"><a href="/athletes/1132003">Florian Kurz</a></h3>
+  <div class="hidden">
+    2026-11-07 08:00:00 UTC
+  </div>
+
+  <div class="text-xs">
+  <div class="font-medium">Ski Alpin, Langlauf</div>
+  <div class="font-normal text-gray-400"></div>
+</div>
+
+
+</div>
+
+
+        </div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/athleten">
+    <span>Alle Athleten</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-teams-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Teams</h2>
+
+
+
+</div>
+
+
+  
+  <div class="component article-team-list">
+
+
+  <div class="teams">
+    <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-sm-6 col">
+          
+      <div class="component article-team-list-item">
+  <div class="component team-card panel text-center">
+  <div class="panel-heading">
+    
+
+
+      <h3 class="component team--title">  <a href="https://atomic.auf.ski/team?id=48994">Atomic Pro Kärnten</a>
+</h3>
+      <p class="component team--subtitle">    Leitung: Markus KIRCHNER,
+  14 Athleten,
+  Saison 2026/27
+</p>
+
+
+    
+  </div>
+  <div class="component team--portrait-picture">
+  <div class="component event--event-picture">
+</div>
+
+</div>
+
+  
+  <div class="component card-rankings ">
+  <div class="num-starts">
+    37 Starts in Saison 2026/27
+  </div>
+
+    <div class="rankings" style="">
+      <div class="ranking ranking-first">
+        <p class="text-2xl">5</p>
+        <p class="text-gray-500">1. Plätze</p>
+      </div>
+      <div class="ranking ranking-second">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">2. Plätze</p>
+      </div>
+      <div class="ranking ranking-third">
+        <p class="text-2xl">1</p>
+        <p class="text-gray-500">3. Plätze</p>
+      </div>
+    </div>
+</div>
+
+
+  <a class="component details-link" target="_self" href="https://atomic.auf.ski/team?id=48994">Zum Team &#187;</a>
+
+
+</div>
+
+</div>
+
+
+        </div>
+        <div class="col-sm-6 col">
+          
+      <div class="component article-team-list-item">
+  <div class="component team-card panel text-center">
+  <div class="panel-heading">
+    
+
+
+      <h3 class="component team--title">  <a href="https://atomic.auf.ski/team?id=48995">Atomic Pro Niederösterreich/Wien</a>
+</h3>
+      <p class="component team--subtitle">    Leitung: Markus KIRCHNER,
+  14 Athleten,
+  Saison 2026/27
+</p>
+
+
+    
+  </div>
+  <div class="component team--portrait-picture">
+  <div class="component event--event-picture">
+</div>
+
+</div>
+
+  
+  <div class="component card-rankings ">
+  <div class="num-starts">
+    8 Starts in Saison 2026/27
+  </div>
+
+    <div class="rankings" style="">
+      <div class="ranking ranking-first">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">1. Plätze</p>
+      </div>
+      <div class="ranking ranking-second">
+        <p class="text-2xl">1</p>
+        <p class="text-gray-500">2. Plätze</p>
+      </div>
+      <div class="ranking ranking-third">
+        <p class="text-2xl">0</p>
+        <p class="text-gray-500">3. Plätze</p>
+      </div>
+    </div>
+</div>
+
+
+  <a class="component details-link" target="_self" href="https://atomic.auf.ski/team?id=48995">Zum Team &#187;</a>
+
+
+</div>
+
+</div>
+
+
+        </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/teams">
+    <span>Alle Teams</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-successes">
+  <div class="page-section-header container-fluid">
+
+  <h2>Erfolge</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="page-teaser-content">
+    <div class="mod-podium-shadow">
+      <div class="component statistic-podium-season">
+  <div class="component statistic-podium">
+    <div class=' component podium'><div class="podiums-wrapper">
+  <div class="second">
+    <div class="ontop">16</div>
+    <div class="podium">
+      <span>2</span>
+    </div>
+  </div>
+  <div class="first">
+    <div class="ontop">25</div>
+    <div class="podium">
+      <span>1</span>
+    </div>
+  </div>
+  <div class="third">
+    <div class="ontop">14</div>
+    <div class="podium">
+      <span>3</span>
+    </div>
+  </div>
+</div>
+  <div class="base">Erfolge 2026/27 bei 277 Einsätzen</div>
+</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="component statistic-topx-athletes-season">
+  <div class="component statistic-chart">
+    <div class="component expandable expandable-statistic-chart is-expandable show-more-button clearfix">
+  <div class="expandable-content">
+    
+        <div class="component highchart" data-options="{&quot;credits&quot;:{&quot;enabled&quot;:false},&quot;xAxis&quot;:{&quot;categories&quot;:[&quot;Luis Stecher&quot;,&quot;Moritz Leibetseder&quot;,&quot;Romy Markt&quot;,&quot;Elisabeth Schlick&quot;,&quot;Larissa Widenschek&quot;,&quot;Luis Fanninger&quot;,&quot;Leonas Plankensteiner&quot;,&quot;Vincent Wölfle&quot;,&quot;Sophia Baumgartner&quot;,&quot;Elias Hirnsperger&quot;]},&quot;yAxis&quot;:{&quot;allowDecimals&quot;:false,&quot;stackLabels&quot;:{&quot;enabled&quot;:true,&quot;style&quot;:{&quot;fontWeight&quot;:&quot;bold&quot;,&quot;color&quot;:&quot;gray&quot;}},&quot;title&quot;:{&quot;text&quot;:&quot;&quot;}},&quot;chart&quot;:{&quot;type&quot;:&quot;bar&quot;},&quot;plotOptions&quot;:{&quot;bar&quot;:{&quot;stacking&quot;:&quot;normal&quot;}},&quot;legend&quot;:{&quot;reversed&quot;:true},&quot;title&quot;:{&quot;text&quot;:&quot;Top-3 Platzierungen&quot;,&quot;style&quot;:{&quot;display&quot;:&quot;none&quot;}},&quot;series_labels&quot;:[&quot;Dritter&quot;,&quot;Zweiter&quot;,&quot;Erster&quot;],&quot;series_columns&quot;:[&quot;num_third&quot;,&quot;num_second&quot;,&quot;num_first&quot;],&quot;category_column&quot;:&quot;fullname&quot;,&quot;series_colors&quot;:[&quot;#b87333&quot;,&quot;#c0c0c0&quot;,&quot;#d8b868&quot;,&quot;#006699&quot;,&quot;#0d233a&quot;],&quot;series&quot;:[{&quot;name&quot;:&quot;Dritter&quot;,&quot;data&quot;:[1,1,0,0,0,0,0,2,0,0],&quot;color&quot;:&quot;#b87333&quot;},{&quot;name&quot;:&quot;Zweiter&quot;,&quot;data&quot;:[1,1,0,2,2,1,1,0,0,0],&quot;color&quot;:&quot;#c0c0c0&quot;},{&quot;name&quot;:&quot;Erster&quot;,&quot;data&quot;:[3,2,2,1,1,1,1,1,1,1],&quot;color&quot;:&quot;#d8b868&quot;}]}">
+  <div style="text-align: center" class="data-box">
+      Statistik wird vorbereitet
+      <div class="spinkit-spinner ">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+
+  </div>
+</div>
+
+
+  </div>
+
+    <div class="show-more type-button">
+      <a title="Mehr anzeigen" href="#">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+</a>    </div>
+</div>
+</div>
+</div>
+
+  </div>
+
+
+
+  <a class="page-teaser-more-link" href="/erfolge">
+    <span>Alle Erfolge</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+    
+
+<section class="page-teaser page-teaser-events-list">
+  <div class="page-section-header container-fluid">
+
+  <h2>Rennfotos</h2>
+
+
+
+</div>
+
+
+  
+
+  <div class="article-events-timeline" data-component="article-events-timeline">
+
+
+    <div data-items-container="news-articles" class="news-articles">
+      <div class="row">
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/51458">ANDIS SPORTSHOP VORALPENCUP
+Athletikbewerb</a></div>
+          <div class="event-date">
+            <span class='date'>10.10.2026</span><span class='time'> 10:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">3180 Lilienfeld, Klosterrotte 1, Turnhalle Gymnasium (im Stift)</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1375059">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287436/25_race_gallery_thumb/dcd484b1baf712bb9b0bdaccd7db3de9/20261010_085556.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287436</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287437/25_race_gallery_thumb/07149d5afdc4733b9f01f7bb4220b124/20261010_085604.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287437</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287438/25_race_gallery_thumb/cd49b3604e4758ff84ce904b3771fa4d/20261010_085608.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287438</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width=""
+       data-height=""
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287439/25_race_gallery_thumb/561f0aaa81d7bc36a0e162736f398a3c/20261010_085617.jpg class="component deferred-img img-thumb orientation-none" />
+
+        </div>
+    </a>
+  <div class="pid">287439</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287440/25_race_gallery_thumb/e048c9fa8665b303e0ea683786e15ce4/20261010_085621.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287440</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287441/25_race_gallery_thumb/3ef942d9225936c2d4753a9a58abc36b/20261010_122411.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287441</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width=""
+       data-height=""
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287442/25_race_gallery_thumb/c65d16aeaddb52c665a5dbac6e3708f6/20261010_122513.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-none" />
+
+        </div>
+    </a>
+  <div class="pid">287442</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375059"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287443/25_race_gallery_thumb/6b3285bd34dbd8357578f7d5a2a6e880/20261010_122638.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287443</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1375059">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/51457">NÖ SKI ATHLETIKBEWERB KINDER
+RAIKA KINDER VORALPENCUP</a></div>
+          <div class="event-date">
+            <span class='date'>10.10.2026</span><span class='time'> 10:00</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">3180 Lilienfeld, Klosterrotte 1, Turnhalle Gymnasium (im Stift)</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1375061">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287450/25_race_gallery_thumb/553ab0f3b01c245e989365fd28e1a100/20261010_085556.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287450</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287451/25_race_gallery_thumb/478886068f09e2bfd896ea1acd168e41/20261010_085604.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287451</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287452/25_race_gallery_thumb/f83007964d2dccd32f87c2a7a8bda87e/20261010_085608.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287452</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287453/25_race_gallery_thumb/df2bd5df85a5706e9e4b68f78ccb0808/20261010_085617.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287453</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287454/25_race_gallery_thumb/88b515c09fdde84be7fdef914f83e83d/20261010_085621.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287454</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287455/25_race_gallery_thumb/bb6d3bb62edb621249ae0cd1179b8f7c/20261010_120733.jpg class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287455</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287456/25_race_gallery_thumb/6dfe2f61e755640ba3bdc32f0b764052/20261010_120845.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287456</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287457/25_race_gallery_thumb/f742f14493726b9e8595d00cb5d24c86/20261010_121143.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287457</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287458/25_race_gallery_thumb/964dbe486a2fedf0c03c5f089cdfa608/20261010_121231.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287458</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-2 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287459/25_race_gallery_thumb/52f17aa0260e1e2047a85feb322654b5/20261010_121352.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287459</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287460/25_race_gallery_thumb/284fc90a00c5f7774c1f9a8654f5726c/20261010_121540.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287460</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287461/25_race_gallery_thumb/2007d842b1f810434885f9140ff587cd/20261010_121718.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287461</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-3 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287462/25_race_gallery_thumb/b01a6ccc6af65a48d46f4d62ed7fa0dd/20261010_121920.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287462</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1375061"
+       data-width="1200"
+       data-height="676"
+       data-title="Veröffentlicht am 19.10.2026"
+       title="Veröffentlicht am 19.10.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/287463/25_race_gallery_thumb/36bda4ea7e9488421b8b2271344380e9/20261010_122127_0_.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">287463</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1375061">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+          <div class="col col-xs-12 col-sm-4">
+
+                <div class="article article-default show-subtitle-and-date article-teaser entity-race">
+
+  
+<div class="component article-default-heading">
+  <div class="first-row">
+    <div class="title">
+              <div class="subtitle-and-date">
+            <div class="subtitle-link"><a href="https://atomic.auf.ski/races/51657">Skibezirk IV - Konditionswettkampf K10-12</a></div>
+          <div class="event-date">
+            <span class='date'>05.09.2026</span><span class='time'> 09:30</span>
+          </div><div class="subtitle-secondary">, Skibasics / Technikbewerb</div>
+            <div class="city-description">Krakau</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+            <div class="article-controls" style="white-space: nowrap">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-row">
+          <h4 class="article-subject tl-tile text-primary">
+        <a href="https://atomic.auf.ski/events/1365033">Fotos veröffentlicht</a>
+</h4>
+
+  </div>
+</div>
+
+  <div class="article-body" style="clear: both; margin-top: 10px">
+      <div class="component event-race-gallery-pictures-published">
+  <div class="article-event-pictures pswp-pictures-container">
+    <div class="component expandable expandable-default show-more-label clearfix">
+  <div class="expandable-content">
+    
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Vertikales Rudern<br />Veröffentlicht am 04.09.2026"
+       title="Vertikales Rudern
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285759/25_race_gallery_thumb/8e184b79edc86b4d77cadd0af7bcbeef/VerticalesRudern.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285759</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Pedalo Speed Jump <br />Veröffentlicht am 04.09.2026"
+       title="Pedalo Speed Jump 
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285760/25_race_gallery_thumb/0af20fccec460559b276f324e0e3380d/PedaloSpeedJump.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285760</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Hindernislauf - CrossCourse<br />Veröffentlicht am 04.09.2026"
+       title="Hindernislauf - CrossCourse
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285761/25_race_gallery_thumb/3e1f82764fda99a4ff98cb1db7e0fd29/Lauf.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285761</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+        <div class="x-raster">
+    <div class="row row-0 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Kastensprünge seitlich<br />Veröffentlicht am 04.09.2026"
+       title="Kastensprünge seitlich
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285762/25_race_gallery_thumb/d43074e0976c9890340b02e31ebc2f6b/KastenSpruengeSeitlich.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285762</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Hürdenbumeranglauf<br />Veröffentlicht am 04.09.2026"
+       title="Hürdenbumeranglauf
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285763/25_race_gallery_thumb/1067f4369a17a882cbf0c780e0932c76/Huerdenbumeranglauf.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285763</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item visible'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="566"
+       data-height="800"
+       data-title="Bergsprint<br />Veröffentlicht am 04.09.2026"
+       title="Bergsprint
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285764/25_race_gallery_thumb/5af082f01a5ecde25da61d72980f2613/Bergsprint.jpg class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285764</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-1 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1200"
+       data-height="748"
+       data-title="Veröffentlicht am 04.09.2026"
+       title="Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285774/25_race_gallery_thumb/00990730e1df3668571cc324182b3c34/WettbewerbUebersicht050926.jpg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">285774</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="533"
+       data-height="800"
+       data-title="Veröffentlicht am 04.09.2026"
+       title="Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285777/25_race_gallery_thumb/5ba164c622da8b4d55d359734597bd8e/Kondiwettbewerb05092026.png
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">285777</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="866"
+       data-height="800"
+       data-title="Stationsrotationsplan<br />Veröffentlicht am 04.09.2026"
+       title="Stationsrotationsplan
+Veröffentlicht am 04.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285898/25_race_gallery_thumb/325b29aa2998ec834ff06505c5b60e60/StationsrotationsplanKondiwettbewerb.png
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">285898</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-2 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="450"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286071/25_race_gallery_thumb/c5c43e7a2cecfcf923060f36f20204f2/WhatsApp-Image-2026-09-05-at-21.52.49-576x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286071</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="686"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286072/25_race_gallery_thumb/fcd769512a3539ed312643149190be20/WhatsApp-Image-2026-09-05-at-21.52.50-1-1024x686.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286072</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="450"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286073/25_race_gallery_thumb/189ae805c6f4680468354afbaffe039c/WhatsApp-Image-2026-09-05-at-21.52.50-576x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286073</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-3 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286074/25_race_gallery_thumb/ebb956cdaf2e342a07e2586a636a7217/WhatsApp-Image-2026-09-05-at-21.52.51-1-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286074</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286075/25_race_gallery_thumb/303e50a90b28f081ba000254d82dbb8c/WhatsApp-Image-2026-09-05-at-21.52.51-2-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286075</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286076/25_race_gallery_thumb/192e57f7449c38caf79d6a0b638cea5f/WhatsApp-Image-2026-09-05-at-21.52.51-3-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286076</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-4 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286077/25_race_gallery_thumb/acc331978f6f8479a31c65d9140aefe1/WhatsApp-Image-2026-09-05-at-21.52.51-4-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286077</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286078/25_race_gallery_thumb/ac1a3f3fc4c72075cd856b1f60eb90e5/WhatsApp-Image-2026-09-05-at-21.52.51-5-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286078</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286079/25_race_gallery_thumb/80f97ae2ff2dfc5f719627c3bb02940b/WhatsApp-Image-2026-09-05-at-21.52.51-6-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286079</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-5 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286080/25_race_gallery_thumb/ced18df1589bbf661022d0d7154abbdd/WhatsApp-Image-2026-09-05-at-21.52.51-7-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286080</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286081/25_race_gallery_thumb/ddbf9de2d5c1a50d70803e1aae46a49b/WhatsApp-Image-2026-09-05-at-21.52.51-8-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286081</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286082/25_race_gallery_thumb/ad08ed620250e448d93c5b7d4cd0f84e/WhatsApp-Image-2026-09-05-at-21.52.52-1-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286082</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-6 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286083/25_race_gallery_thumb/59d5fe802b2abbd69daf782863258c0a/WhatsApp-Image-2026-09-05-at-21.52.52-2-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286083</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286084/25_race_gallery_thumb/51174ccc01c023973aa501323df6114d/WhatsApp-Image-2026-09-05-at-21.52.52-3-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286084</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286085/25_race_gallery_thumb/ed5eaa649f09d1b864eb77fa3af39f74/WhatsApp-Image-2026-09-05-at-21.52.52-4-768x1024__1_.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286085</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-7 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286086/25_race_gallery_thumb/c768283b0a47d61c45ef5888e65305c4/WhatsApp-Image-2026-09-05-at-21.52.52-4-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286086</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286087/25_race_gallery_thumb/1afae8dc5da6307383e4d72e19c08405/WhatsApp-Image-2026-09-05-at-21.52.52-6-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286087</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286088/25_race_gallery_thumb/e89ec43d79d90d3da138a5a8ce37492c/WhatsApp-Image-2026-09-05-at-21.52.52-7-768x1024__1_.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286088</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-8 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286089/25_race_gallery_thumb/32f9df3f0bb56f18f6f2e599e026c1d9/WhatsApp-Image-2026-09-05-at-21.52.52-7-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286089</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286090/25_race_gallery_thumb/49364161ec5aa373378b0770252c5122/WhatsApp-Image-2026-09-05-at-21.52.52-8-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286090</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286091/25_race_gallery_thumb/b4dfee592aa5e9f4d671d7661b7fc533/WhatsApp-Image-2026-09-05-at-21.52.52-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286091</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-9 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="1024"
+       data-height="768"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286092/25_race_gallery_thumb/358c5e110de29ae7eef7d37eb139861f/WhatsApp-Image-2026-09-05-at-21.52.53-1-1024x768.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-landscape" />
+
+        </div>
+    </a>
+  <div class="pid">286092</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286093/25_race_gallery_thumb/0e03a730a2e12792c952ac000ab55324/WhatsApp-Image-2026-09-05-at-21.52.53-2-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286093</div>
+</div>
+
+
+</div>
+        </div>
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286094/25_race_gallery_thumb/07d9fac106d9665d7c8bdf9f0fdbc03a/WhatsApp-Image-2026-09-05-at-21.52.53-3-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286094</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+    <div class="row row-10 ">
+        <div class="col-xs-4 col">
+          
+          <div class='event-pictures-item hidden'>
+
+            <div class="component picture-thumb">
+    <a href="https://atomic.auf.ski/events/1365033"
+       data-width="600"
+       data-height="800"
+       data-title="Veröffentlicht am 08.09.2026"
+       title="Veröffentlicht am 08.09.2026"
+       class="">
+        <div class="img-container">
+            <img data-src=https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/286095/25_race_gallery_thumb/caab47e2d10d21347b9abf731bfc3e31/WhatsApp-Image-2026-09-05-at-21.52.53-768x1024.jpeg
+       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+       class="component deferred-img img-thumb orientation-portrait" />
+
+        </div>
+    </a>
+  <div class="pid">286095</div>
+</div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+
+
+      <a class="more-link" href="https://atomic.auf.ski/events/1365033">
+        <span>Alle Fotos</span>
+        <i class="fa fa-long-arrow-alt-right"></i>
+</a>  </div>
+
+</div>
+
+
+
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+  <a class="page-teaser-more-link" href="/rennfotos">
+    <span>Alle Rennfotos</span>
+    <i class="fa fa-long-arrow-alt-right"></i>
+  </a>
+</section>
+
+
+</div>
+
+
+
+</div>
+
+        </div>
+
+          <div class="platform-footer">
+  <div class="platform-footer-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-first">
+          <a href="https://atomic.auf.ski/atomic/kontakt">Impressum</a>
+
+          <div class="mt-1.5 text-2xl">
+
+          </div>
+        </div>
+        <div class="col-sm-6 col-last">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="platform-footer-poweredby">
+    <div class="container-fluid">
+      <div class="text-powered-by">powered by</div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="sponsors-carousel-height-100">
+            <div class="component sponsors-carousel">
+  <div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220870/44_article_gallery_fit/6ec4946002ff522fc3e44d9b438a18e4/Screenshot_2025-02-18_132139.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220889/44_article_gallery_fit/4cd69740e3c1649de53bcdfc30d34d76/Screenshot_2025-02-18_132426.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/242409/44_article_gallery_fit/f46255fc23994fed1c1252df628412f4/Screenshot_2025-05-27_141332.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/245373/44_article_gallery_fit/d1624c0a7f6d2eb7fcc1407d3f2658d1/Screenshot_2025-11-05_134351.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220901/44_article_gallery_fit/a2df99dc2c215dac71104659d1f6b7ee/Screenshot_2025-02-18_132410.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220910/44_article_gallery_fit/c1ebb9e32ec8e64f1f2581b173546bdf/Screenshot_2025-02-18_132410.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220899/44_article_gallery_fit/e5852659fe957137e040740b4604c859/Screenshot_2025-02-18_132440.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285953/44_article_gallery_fit/98bcdb2bc66452216ebce3d1cc78a433/trzswrt.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/220897/44_article_gallery_fit/97498143d545bdb2d4081c75cfdc8f58/Screenshot_2025-02-18_132410.png" style=""/>
+</a></div>
+
+        </div>
+        <div class="item ">
+          <div class="component sponsor">
+    <a target="_self" href="/sponsors">
+      <img class="img-responsive" src="https://fs-skizeit-production.s3.eu-west-1.amazonaws.com/pictures/285950/44_article_gallery_fit/da15c46e37ced3f0cb92106d1c8682ad/Screenshot_2026-09-07_074056.png" style=""/>
+</a></div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-2 logo-wir-auf-ski">
+          <a target="_blank" href="https://wir.auf.ski">
+            <img class="img-responsive" src="https://assets0.skizeit.at/assets/auf-ski/wir-auf-ski-cbd03c52a855db4aa4ffa205d2ea322f9f319694c6f7660fabf6059648e497aa.svg" />
+</a>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div id="env" style="display: none">production</div>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+      <script>
+    (function () {
+      const isPWA =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;
+
+      window.clicky_custom = {
+        app_mode: isPWA ? 'pwa' : 'browser'
+      };
+      window.clicky_custom.visitor = {
+        app_mode: isPWA ? 'pwa' : 'browser'
+      };
+    })();
+  </script>
+
+  <script async data-id="101353324" src="//static.getclicky.com/js"></script>
+
+  </body>
+</html>
