@@ -30,22 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3. Floating Variation Navigator Dropdown Toggle
-  var pill = document.getElementById("variation-nav-pill");
-  var toggleBtn = document.getElementById("pill-toggle-btn");
-  if (pill && toggleBtn) {
-    toggleBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      pill.classList.toggle("open");
-    });
-    document.addEventListener("click", function (e) {
-      if (!pill.contains(e.target)) {
-        pill.classList.remove("open");
-      }
-    });
-  }
-
-  // 4. Mobile Menu Hamburger Toggle Helper
+  // 3. Mobile Menu Hamburger Toggle Helper
   var mobileToggle = document.querySelector(".navbar-toggle");
   var mobileCollapse = document.getElementById("navbar-collapse");
   if (mobileToggle && mobileCollapse) {

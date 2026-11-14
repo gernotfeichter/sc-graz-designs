@@ -134,25 +134,33 @@ body.platform.standalone {
 }
 
 .hero-content-wrapper {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 3;
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px 30px;
+  padding: 0 30px clamp(58px, 6vw, 78px);
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Club Badge & Motto Switcher */
 .hero-top-row {
+  position: absolute;
+  top: clamp(18px, 2.4vw, 30px);
+  left: clamp(18px, 4vw, 48px);
+  right: clamp(18px, 4vw, 48px);
+  z-index: 4;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 18px;
+  gap: 10px 15px;
 }
 
 .club-badge {
@@ -198,6 +206,13 @@ body.platform.standalone {
   backdrop-filter: blur(8px);
 }
 
+.hero-motto-corner {
+  position: absolute;
+  right: clamp(18px, 4vw, 48px);
+  bottom: clamp(18px, 2.4vw, 30px);
+  z-index: 4;
+}
+
 .moto-switcher {
   display: inline-grid;
   align-items: center;
@@ -235,7 +250,7 @@ body.platform.standalone {
 /* Hero Title */
 .hero-title {
   color: #FFFFFF;
-  margin: 0 0 18px 0;
+  margin: 0;
   line-height: 1.15;
 }
 
@@ -321,61 +336,12 @@ body.platform.standalone {
   text-transform: uppercase;
 }
 
-/* Hero Action Buttons */
-.hero-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.btn-hero {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 22px;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-  letter-spacing: 0.3px;
-}
-
-.btn-hero-primary {
-  background: var(--scg-primary);
-  color: #FFFFFF !important;
-  border: 1px solid var(--scg-primary);
-  box-shadow: 0 4px 14px rgba(202, 25, 25, 0.4);
-}
-
-.btn-hero-primary:hover {
-  background: var(--scg-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(202, 25, 25, 0.5);
-}
-
-.btn-hero-secondary {
-  background: rgba(255, 255, 255, 0.15);
-  color: #FFFFFF !important;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-}
-
-.btn-hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-}
-
-.btn-hero-outline {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.85) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.btn-hero-outline:hover {
-  color: #FFFFFF !important;
-  border-color: #FFFFFF;
+.hero-athlete-badge-corner {
+  position: absolute;
+  top: clamp(98px, 10.9vw, 140px);
+  right: clamp(380px, 42vw, 540px);
+  z-index: 4;
+  margin-bottom: 0;
 }
 
 /* Cards & Content Sections */
@@ -431,111 +397,22 @@ body.platform.standalone {
   height: auto;
 }
 
-/* Floating Variation Navigator Switcher */
-.variation-nav-pill {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  background: rgba(15, 23, 42, 0.94);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
-}
-
-.variation-nav-pill.open {
-  border-radius: 16px;
-}
-
-.pill-toggle-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  background: none;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.pill-num-badge {
-  background: var(--scg-primary);
-  color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 9999px;
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.pill-dropdown-content {
-  display: none;
-  padding: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  min-width: 280px;
-}
-
-.variation-nav-pill.open .pill-dropdown-content {
-  display: block;
-}
-
-.pill-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none !important;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.pill-option:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-}
-
-.pill-option.active {
-  background: var(--scg-primary);
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-.pill-option-hub {
-  border-top: 1px dashed rgba(255, 255, 255, 0.2);
-  margin-top: 6px;
-  padding-top: 10px;
-  color: #38BDF8 !important;
-}
-
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .component.header-image.scgraz-hero-banner {
+    min-height: 480px;
+  }
+  .hero-banner-inner {
     min-height: 480px;
   }
   .hero-overlay {
     background: linear-gradient(90deg, rgba(8,27,56,0.88) 0%, rgba(8,27,56,0.68) 55%, rgba(8,27,56,0.35) 100%);
   }
   .hero-content-wrapper {
-    padding: 30px 18px;
+    padding: 0 18px 66px;
   }
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .btn-hero {
-    width: 100%;
-    text-align: center;
-  }
-  .variation-nav-pill {
-    bottom: 15px;
-    right: 15px;
+  .hero-athlete-badge-corner {
+    top: calc(clamp(18px, 2.4vw, 30px) + 43px);
+    right: clamp(18px, 4vw, 48px);
   }
 }
