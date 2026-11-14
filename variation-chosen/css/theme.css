@@ -4,7 +4,7 @@
  * Theme CSS: Externalized for performance, modularity & clarity
  * ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Permanent+Marker&display=swap');
 
 :root {
   --scg-primary: #00A3E0;
@@ -199,11 +199,11 @@ body.platform.standalone {
   display: inline-flex;
   align-items: center;
   gap: 0;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3px 12px;
-  border-radius: 9999px;
-  backdrop-filter: blur(8px);
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
 }
 
 .hero-motto-corner {
@@ -225,26 +225,17 @@ body.platform.standalone {
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 15px;
-  font-weight: 800;
-  color: #FFFFFF;
-  letter-spacing: 0.5px;
+  font-family: 'Permanent Marker', 'Comic Sans MS', cursive;
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.3px;
   white-space: nowrap;
 }
 
 .moto-phrase.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-.moto-phrase[data-phrase="Ride on"] {
-  color: #38BDF8;
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
-}
-
-.moto-phrase[data-phrase="Race on"] {
-  color: #F87171;
-  text-shadow: 0 0 12px rgba(248, 113, 113, 0.6);
 }
 
 /* Hero Title */
