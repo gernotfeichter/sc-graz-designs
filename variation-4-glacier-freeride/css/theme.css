@@ -190,35 +190,25 @@ body.platform.standalone {
 .moto-box {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 5px 14px;
+  padding: 3px 12px;
   border-radius: 9999px;
   backdrop-filter: blur(8px);
 }
 
-.moto-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
-}
-
 .moto-switcher {
-  position: relative;
-  display: inline-block;
-  min-width: 90px;
-  height: 22px;
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .moto-phrase {
-  position: absolute;
-  left: 0;
-  top: 0;
+  grid-area: 1 / 1;
+  text-align: center;
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(6px);
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 15px;
   font-weight: 800;
