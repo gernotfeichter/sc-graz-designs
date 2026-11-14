@@ -1,0 +1,538 @@
+/* ==========================================================
+ * ASVÖ Skiclub Graz - Design Variation 4: Glacier Freeride & Jump
+ * Aerial Freedom & Big-Air Powder
+ * Theme CSS: Externalized for performance, modularity & clarity
+ * ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --scg-primary: #00A3E0;
+  --scg-primary-hover: #0284C7;
+  --scg-secondary: #081B38;
+  --scg-accent: #CA1919;
+  --scg-nav-bg: rgba(8, 27, 56, 0.98);
+  --scg-nav-text: #F0F9FF;
+  --scg-card-bg: rgba(255, 255, 255, 0.96);
+  --scg-card-border: 1px solid rgba(0, 163, 224, 0.25);
+  --scg-card-shadow: 0 10px 32px rgba(8, 27, 56, 0.15);
+  --scg-font: 'Outfit', -apple-system, sans-serif;
+}
+
+/* Body & Background */
+body.platform,
+body.platform.standalone {
+  font-family: var(--scg-font) !important;
+  color: #1e293b;
+  background-image: url('../images/background.jpg') !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar.navbar-style-with-bgcolor,
+.navbar.navbar-default {
+  background-color: var(--scg-nav-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 3px solid #00A3E0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-header .navbar-img-wrapper img {
+  max-height: 52px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
+}
+
+.navbar-default .navbar-header .navbar-img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+.navbar h1 a,
+.navbar .navbar-nav .nav-label {
+  color: var(--scg-nav-text) !important;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navbar h1 {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li.active > a {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 3px solid var(--scg-primary);
+}
+
+.navbar-nav > li.active > a .nav-label {
+  color: #FFFFFF !important;
+}
+
+/* Hero Banner (Shown ONLY on main/home page) */
+.component.header-image.scgraz-hero-banner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -15px;
+  margin-bottom: 45px;
+  min-height: clamp(380px, 42vw, 540px);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+.hero-banner-inner {
+  position: relative;
+  width: 100%;
+  min-height: clamp(380px, 42vw, 540px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.scgraz-hero-banner:hover .hero-backdrop {
+  transform: scale(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(8,27,56,0.92) 0%, rgba(8,27,56,0.70) 45%, rgba(8,27,56,0.15) 80%, rgba(8,27,56,0) 100%);
+  z-index: 2;
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+/* Club Badge & Motto Switcher */
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.club-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(0, 163, 224, 0.15);
+  border: 1px solid #00A3E0;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00A3E0;
+  box-shadow: 0 0 10px #00A3E0;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(202, 25, 25, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(202, 25, 25, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(202, 25, 25, 0); }
+}
+
+/* Motto Switcher: "Ride on - Race on" */
+.moto-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px 12px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+
+.moto-switcher {
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.moto-phrase {
+  grid-area: 1 / 1;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.moto-phrase.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.moto-phrase[data-phrase="Ride on"] {
+  color: #38BDF8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.moto-phrase[data-phrase="Race on"] {
+  color: #F87171;
+  text-shadow: 0 0 12px rgba(248, 113, 113, 0.6);
+}
+
+/* Hero Title */
+.hero-title {
+  color: #FFFFFF;
+  margin: 0 0 18px 0;
+  line-height: 1.15;
+}
+
+.hero-title-main {
+  display: block;
+  font-size: clamp(28px, 4.2vw, 48px);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title-sub {
+  display: block;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 400;
+  opacity: 0.92;
+  margin-top: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Philipp Papst Coach Badge */
+.hero-athlete-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-athlete-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--scg-primary);
+}
+
+.athlete-badge-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--scg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.athlete-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.athlete-badge-name {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.athlete-badge-role {
+  color: #0284C7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.trainer-pill {
+  background: var(--scg-primary);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Hero Action Buttons */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-hero-primary {
+  background: var(--scg-primary);
+  color: #FFFFFF !important;
+  border: 1px solid var(--scg-primary);
+  box-shadow: 0 4px 14px rgba(202, 25, 25, 0.4);
+}
+
+.btn-hero-primary:hover {
+  background: var(--scg-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(202, 25, 25, 0.5);
+}
+
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-hero-outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-hero-outline:hover {
+  color: #FFFFFF !important;
+  border-color: #FFFFFF;
+}
+
+/* Cards & Content Sections */
+.content-container {
+  padding: 20px 4vw 80px 4vw !important;
+}
+
+.article-teaser,
+.article-default,
+.article-custom-articles-list,
+.page-section-header,
+.filter-container,
+.entity-article {
+  background: var(--scg-card-bg) !important;
+  border: var(--scg-card-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--scg-card-shadow) !important;
+  padding: 20px !important;
+  margin-bottom: 24px !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-teaser:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.page-section-header h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--scg-secondary);
+  border-left: 5px solid var(--scg-primary);
+  padding-left: 12px;
+  margin: 0;
+}
+
+.article-subject a {
+  color: var(--scg-secondary) !important;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.article-subject a:hover {
+  color: var(--scg-primary) !important;
+  text-decoration: none;
+}
+
+.img-container img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Floating Variation Navigator Switcher */
+.variation-nav-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.94);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.variation-nav-pill.open {
+  border-radius: 16px;
+}
+
+.pill-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pill-num-badge {
+  background: var(--scg-primary);
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pill-dropdown-content {
+  display: none;
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 280px;
+}
+
+.variation-nav-pill.open .pill-dropdown-content {
+  display: block;
+}
+
+.pill-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none !important;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pill-option:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.pill-option.active {
+  background: var(--scg-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.pill-option-hub {
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  margin-top: 6px;
+  padding-top: 10px;
+  color: #38BDF8 !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .component.header-image.scgraz-hero-banner {
+    min-height: 480px;
+  }
+  .hero-content-wrapper {
+    padding: 30px 18px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-hero {
+    width: 100%;
+    text-align: center;
+  }
+  .variation-nav-pill {
+    bottom: 15px;
+    right: 15px;
+  }
+}
