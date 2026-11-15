@@ -155,52 +155,6 @@ body.platform.standalone {
   background-color: var(--scg-nav-bg) !important;
 }
 
-/* Club Badge & Motto Switcher */
-.hero-top-row {
-  position: absolute;
-  top: clamp(18px, 2.4vw, 30px);
-  left: clamp(18px, 4vw, 48px);
-  right: clamp(18px, 4vw, 48px);
-  z-index: 4;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 10px 15px;
-}
-
-.club-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 0;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  background: rgba(0, 163, 224, 0.15);
-  border: 1px solid #00A3E0;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
-}
-
-.badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #00A3E0;
-  box-shadow: 0 0 10px #00A3E0;
-  animation: pulse-dot 2s infinite;
-}
-
-@keyframes pulse-dot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(202, 25, 25, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(202, 25, 25, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(202, 25, 25, 0); }
-}
-
 /* Motto Switcher: "Ride on - Race on" */
 .moto-box {
   display: inline-flex;
