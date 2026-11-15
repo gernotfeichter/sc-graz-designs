@@ -167,6 +167,7 @@ body.platform.standalone {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-top: 24px;
   padding: 6px 14px;
   border-radius: 9999px;
   background: rgba(0, 163, 224, 0.15);
@@ -226,7 +227,7 @@ body.platform.standalone {
   transform: translateY(6px);
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Permanent Marker', 'Comic Sans MS', cursive;
-  font-size: clamp(18px, 1.6vw, 24px);
+  font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
   color: #000000;
   letter-spacing: 0.3px;
