@@ -258,7 +258,7 @@ body.platform.standalone {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Section headers: no card badge, white text on the page background */
+/* Section headers: no card badge, dark text on the bright page background */
 .page-section-header {
   background: transparent !important;
   border: 0 !important;
@@ -276,13 +276,13 @@ section.page-teaser-articles-list .page-section-header.container-fluid {
 .page-section-header h2 {
   font-size: 32px;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--scg-secondary);
   padding-left: 0;
   margin: 0;
 }
 
 .page-section-header h3 {
-  color: #FFFFFF;
+  color: var(--scg-secondary);
 }
 
 .article-subject a {
