@@ -338,6 +338,48 @@ section.page-teaser-articles-list .page-section-header.container-fluid {
   height: auto;
 }
 
+/* Sub-navigation links (e.g. Verein: Der Verein, Mitgliedschaft, ...) */
+.nav-pages-level1 ul {
+  padding-left: 0;
+  margin: 8px 0 0;
+}
+
+.nav-pages-level1 ul li {
+  margin: 4px 3px;
+}
+
+.nav-pages-level1 ul li a.link {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--scg-secondary);
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-pages-level1 ul li a.link:hover,
+.nav-pages-level1 ul li.active a.link {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--scg-secondary);
+  text-decoration: none;
+}
+
+.nav-pages-level1 ul li.active a.link {
+  font-weight: 700;
+}
+
+/* Filter labels (e.g. Veranstaltungen, Athleten) */
+.filter-sort-controls .label {
+  color: #334155;
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .component.header-image.scgraz-hero-banner {
