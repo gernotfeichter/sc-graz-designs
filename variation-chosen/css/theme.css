@@ -24,12 +24,31 @@ body.platform,
 body.platform.standalone {
   font-family: var(--scg-font) !important;
   color: #1e293b;
-  background-image: url('../images/background.jpg') !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
+  background-color: #eaf4fb;
   min-height: 100vh;
+}
+
+body.platform::before,
+body.platform.standalone::before {
+  content: "";
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  body.platform::before,
+  body.platform.standalone::before {
+    top: 76px;
+  }
 }
 
 /* Navbar Styling */
