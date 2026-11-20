@@ -44,7 +44,8 @@ body.platform.standalone {
 }
 
 .navbar-default .navbar-header .navbar-img-wrapper img {
-  max-height: 52px;
+  max-height: 76px;
+  max-width: none;
   width: auto;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
   transition: transform 0.2s ease;
@@ -82,6 +83,12 @@ body.platform.standalone {
 
 .navbar-nav > li.active > a .nav-label {
   color: #FFFFFF !important;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-header .navbar-img-wrapper img {
+    max-height: 60px;
+  }
 }
 
 /* Hero Banner (Shown ONLY on main/home page) */
