@@ -376,8 +376,9 @@ section.page-teaser-articles-list .page-section-header.container-fluid {
 }
 
 /* Filter labels (e.g. Veranstaltungen, Athleten) */
+.component.filter-sort-controls .label,
 .filter-sort-controls .label {
-  color: #334155;
+  color: var(--scg-secondary);
 }
 
 /* Responsive tweaks */
