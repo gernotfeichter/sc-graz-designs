@@ -129,7 +129,7 @@ body.platform.standalone {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(8,27,56,0.62) 0%, rgba(8,27,56,0.44) 45%, rgba(8,27,56,0.10) 80%, rgba(8,27,56,0) 100%);
+  background: linear-gradient(90deg, rgba(8,27,56,0.18) 0%, rgba(8,27,56,0.10) 45%, rgba(8,27,56,0.02) 80%, rgba(8,27,56,0) 100%);
   z-index: 2;
 }
 
@@ -304,7 +304,7 @@ section.page-teaser-articles-list .page-section-header.container-fluid {
     min-height: 480px;
   }
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(8,27,56,0.88) 0%, rgba(8,27,56,0.68) 55%, rgba(8,27,56,0.35) 100%);
+    background: linear-gradient(90deg, rgba(8,27,56,0.28) 0%, rgba(8,27,56,0.16) 55%, rgba(8,27,56,0.06) 100%);
   }
   .hero-content-wrapper {
     padding: 0 18px;
