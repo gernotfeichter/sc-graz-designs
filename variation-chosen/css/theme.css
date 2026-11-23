@@ -41,7 +41,7 @@ body.platform.standalone::before {
   background-position: center top;
   background-repeat: no-repeat;
   background-blend-mode: color;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
   pointer-events: none;
 }
