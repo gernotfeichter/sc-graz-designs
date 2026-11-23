@@ -60,6 +60,8 @@ body.platform.standalone::before {
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 3px solid #00A3E0 !important;
+  /* Drop the navbar's blue bottom edge so it meets the banner cleanly. */
+  padding-bottom: 3px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
   transition: all 0.3s ease;
 }
@@ -118,11 +120,19 @@ body.platform.standalone::before {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  margin-top: -15px;
+  /* Clear the fixed navbar (which is taller than the platform's 97px body offset).
+     A negative margin here tucked the top of the banner — and Nikki's helmet —
+     behind the navbar. */
+  margin-top: 5px;
   margin-bottom: 45px;
   min-height: clamp(380px, 42vw, 540px);
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  /* The negative-offset shadow fills the hairline gap between the fixed navbar
+     and the banner with the navbar colour, so the page background can't show
+     through. (An element's own box-shadow isn't clipped by overflow:hidden.) */
+  box-shadow:
+    0 -20px 0 var(--scg-nav-bg),
+    0 12px 40px rgba(0, 0, 0, 0.3);
   display: block;
 }
 
@@ -142,7 +152,11 @@ body.platform.standalone::before {
   bottom: 0;
   background-image: url('../images/banner.jpg');
   background-size: cover;
-  background-position: center right;
+  /* Keep the top of the banner visible when the hero is wider than the
+     1920x540 source image (cover would otherwise crop the helmet).
+     The 1px vertical offset aligns the cyan strip near the image's bottom. */
+  background-position: right 1px;
+  transform-origin: center top;
   z-index: 1;
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
