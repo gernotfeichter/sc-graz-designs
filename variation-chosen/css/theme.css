@@ -36,11 +36,11 @@ body.platform.standalone::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background.jpg');
+  background-image: linear-gradient(rgba(0, 163, 224, 0.35), rgba(0, 163, 224, 0.35)), url('../images/background.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
+  background-blend-mode: color;
   opacity: 0.2;
   z-index: -1;
   pointer-events: none;
