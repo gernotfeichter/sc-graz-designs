@@ -1,24 +1,10 @@
 /* ==========================================================
  * ASVÖ Skiclub Graz - Design Variation 4: Glacier Freeride & Jump
- * Theme JS: External script for motto ticker & UI interactions
+ * Theme JS: External script for UI interactions
  * ========================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Motto Switcher: Alternates between "Ride on" and "Race on" every 3.5s
-  var switcher = document.getElementById("moto-switcher");
-  if (switcher) {
-    var phrases = switcher.querySelectorAll(".moto-phrase");
-    var currentIdx = 0;
-    if (phrases.length > 1) {
-      setInterval(function () {
-        phrases[currentIdx].classList.remove("active");
-        currentIdx = (currentIdx + 1) % phrases.length;
-        phrases[currentIdx].classList.add("active");
-      }, 3500);
-    }
-  }
-
-  // 2. Navbar Scroll Dynamic Blur
+  // 1. Navbar Scroll Dynamic Blur
   var navbar = document.querySelector(".navbar");
   if (navbar) {
     window.addEventListener("scroll", function () {
@@ -30,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3. Mobile Menu Hamburger Toggle Helper
+  // 2. Mobile Menu Hamburger Toggle Helper
   var mobileToggle = document.querySelector(".navbar-toggle");
   var mobileCollapse = document.getElementById("navbar-collapse");
   if (mobileToggle && mobileCollapse) {

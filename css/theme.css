@@ -215,11 +215,11 @@ body.platform.standalone::before {
   background-color: var(--scg-nav-bg) !important;
 }
 
-/* Motto Switcher: "Ride on - Race on" */
+/* Motto: "Ride on - Race on" (static, top right of the hero) */
 .moto-box {
   display: inline-flex;
   align-items: center;
-  gap: 0;
+  justify-content: center;
   background: none;
   border: 0;
   padding: 0;
@@ -229,34 +229,21 @@ body.platform.standalone::before {
 
 .hero-motto-corner {
   position: absolute;
+  top: clamp(18px, 2.4vw, 30px);
   right: clamp(18px, 4vw, 48px);
-  bottom: clamp(18px, 2.4vw, 30px);
   z-index: 4;
 }
 
-.moto-switcher {
-  display: inline-grid;
-  align-items: center;
-  justify-items: center;
-}
-
-.moto-phrase {
-  grid-area: 1 / 1;
+.moto-text {
+  display: block;
   text-align: center;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Permanent Marker', 'Comic Sans MS', cursive;
-  font-size: clamp(36px, 3.2vw, 48px);
+  font-size: clamp(29px, 2.56vw, 38px);
   font-weight: 400;
+  line-height: 1.05;
   color: #000000;
   letter-spacing: 0.3px;
   white-space: nowrap;
-}
-
-.moto-phrase.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Hero Title */
